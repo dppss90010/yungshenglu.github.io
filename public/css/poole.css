@@ -363,6 +363,7 @@ tbody tr:nth-child(odd) th {
   list-style: none;
 }
 .related-posts h3 {
+  font-size: 1em;
   margin-top: 0;
 }
 .related-posts li small {
