@@ -2,13 +2,13 @@
 layout     : post
 title      : "docoGen - document Generator"
 subtitle   : "Node.js Modules"
-date       : 2017-08-31 12:00:00
+date       : 2017-11-19 12:00:00
 author     : "Yung-Sheng Lu"
 tags       : docoGen DocumentGenerator LateX JSON Markdown NodeJS ReactJS SemanticUI
 comments   : true
 signature  : true
-slides     : https://yungshenglu.github.io/slides/20170831_mc2017.html
-present    : https://slides.com/yungshenglu/mc2017/live
+slides     : https://yungshenglu.github.io/slides/20171119_docoGen.html
+present    : 
 ---
 
 ## About docoGen
