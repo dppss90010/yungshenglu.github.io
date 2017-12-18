@@ -1,0 +1,26 @@
+# Dependencies
+markdown            : kramdown
+redcarpet:
+  extensions        : ["tables", "autolink", "strikethrough", "space_after_headers", "with_toc_data", "fenced_code_blocks"]
+highlighter         : rouge
+gems                : ["jekyll-paginate"]
+
+# Permalinks
+permalink           : pretty
+
+# Setup
+title               : Yung-Sheng's Notes
+tagline             : 'Personal Tech Notes'
+description         : 'News, articles and reviews.'
+baseurl             : https://yungshenglu.github.io/
+
+author              : Yung-Sheng Lu
+name                : 'Yung-Sheng Lu'
+url                 : https://yungshenglu.github.io/
+
+paginate            : 5
+
+# Custom vars
+version             : 0.1.0
+twitter_username    : yungshenglu
+github_username     : yungshenglu
