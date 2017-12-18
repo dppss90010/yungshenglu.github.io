@@ -4,7 +4,7 @@ title      : "mm-Wave on Wheels: Practical 60 GHz Vehicular Communication Withou
 subtitle   : "Papers Study"
 date       : 2017-10-24 18:00:00
 author     : "Yung-Sheng Lu"
-tags       : mm-Wave 60GHz Vehicular
+tags       : mm-Wave VehicularCommunication
 comments   : true
 signature  : true
 slides     : https://yungshenglu.github.io/slides/20171024_slides.html

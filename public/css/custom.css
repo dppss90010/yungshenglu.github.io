@@ -15,7 +15,8 @@
     font-weight: bold;
 }
 .theme-base-chocolate .sidebar a:hover {
-    color: rgba(255, 255, 255, 0.5);
+    color: #FFFFFF;
+    text-decoration: none;
 }
 .theme-base-chocolate .sidebar-nav a.active {
     text-decoration: none;
