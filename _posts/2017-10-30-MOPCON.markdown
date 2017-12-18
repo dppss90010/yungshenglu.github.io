@@ -1,0 +1,25 @@
+---
+layout     : post
+title      : "MOPCON 2017 Sharing"
+subtitle   : "Conference Sharing"
+date       : 2017-10-30 12:00:00
+author     : "Yung-Sheng Lu"
+tags       : MOPCON Conferences
+comments   : true
+signature  : true
+slides     : https://yungshenglu.github.io/slides/20171030_mopcon.html
+present    : https://slides.com/yungshenglu/mopcon2017/live
+---
+
+## About MOPCON 2017
+
+MOPCON 已是南台灣最大科技研討會，也是社群、開發者、學⽣、新創公司、及許多傑出貢獻者的重要交流平台。今年以「 Hyperconnectivity － 互聯、互動、智慧」為宗旨，探討更⾼度連結的未來世界。 - 引用至 MOPCON 2017 官網
+
+* 地點：高雄國際議會中心 (高雄市鹽埕區中正四路274號)
+* 時間：OCT 28 - 29, 2017
+
+## References
+
+* [MOPCON 2017 官網](https://mopcon.org/2017/)
+* [MOPCON 2017 Gitter](https://gitter.im/MOPCON/mopcon-chat)
+* [MOPCON 2017 HackMD](https://hackmd.io/c/mopcon-2017/)

@@ -2,12 +2,13 @@
 layout     : post
 title      : "mm-Wave on Wheels: Practical 60 GHz Vehicular Communication Without Beam Training"
 subtitle   : "Papers Study"
-date       : 2017-10-24 18:00:00
+date       : 2017-10-24 12:00:00
 author     : "Yung-Sheng Lu"
 tags       : mmWave VehicularCommunication
 comments   : true
 signature  : true
-slides     : https://yungshenglu.github.io/slides/20171024_slides.html
+slides     : https://yungshenglu.github.io/slides/20171024_presentation.html
+present    : https://slides.com/yungshenglu/20171024_groupmeeting/live
 ---
 
 > * Written by **Adrian Loch**, **Arash Asadi**, **Gek Hong Sim**, **Joerg Widmer**, **Matthias Hollick**.
