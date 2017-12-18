@@ -115,7 +115,7 @@
     text-decoration: none;
 }
 .theme-base-chocolate .post-date {
-    font-size: 1rem;
+    font-size: 0.75rem;
     margin-bottom: .5rem;
 }
 .theme-base-chocolate .post-slides {
@@ -124,7 +124,7 @@
 .theme-base-chocolate .post {
     border-bottom: 1px solid #ddd;
     margin: 0;
-    padding: 40px 0;
+    padding: 40px 0 20px;
 }
 .theme-base-chocolate .post h1 p {
     font-size: 1rem;
@@ -298,6 +298,7 @@
     display: inline-block;
     width: 79%;
     vertical-align: middle;
+    font-size: 0.75rem;
 }
 @media screen and (max-width: 479px) {
     .theme-base-chocolate .profile {

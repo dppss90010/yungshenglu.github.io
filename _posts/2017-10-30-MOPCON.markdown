@@ -16,7 +16,7 @@ present    : https://slides.com/yungshenglu/mopcon2017/live
 MOPCON 已是南台灣最大科技研討會，也是社群、開發者、學⽣、新創公司、及許多傑出貢獻者的重要交流平台。今年以「 Hyperconnectivity － 互聯、互動、智慧」為宗旨，探討更⾼度連結的未來世界。 －引用至 MOPCON 2017 官網
 
 * 地點：高雄國際議會中心 (高雄市鹽埕區中正四路274號)
-* 時間：OCT 28 - 29, 2017
+* 時間：28 - 29 OCT 2017
 
 ## References
 

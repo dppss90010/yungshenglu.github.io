@@ -15,12 +15,14 @@ layout: default
       </span>
       <a href="{{ page.slides }}">Slides</a>
     </span>
-    <span class="post-slides" style="margin: 0 0.5em">
-      <span class="fa-stack fa-sm">
-        <i class="fa fa-eye fa-stack-1x"></i>
-      </span>
-      <a href="{{ page.present }}">Present Live</a>
-    </span>
+    {% if page.present != null %}
+        <span class="post-slides" style="margin: 0 0.5em">
+          <span class="fa-stack fa-sm">
+            <i class="fa fa-eye fa-stack-1x"></i>
+          </span>
+          <a href="{{ page.present }}">Present Live</a>
+        </span>
+    {% endif %}
   </span>
  
   {{ content }}
