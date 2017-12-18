@@ -1,0 +1,34 @@
+---
+layout     : post
+title      : "docoGen - document Generator"
+subtitle   : "Node.js Modules"
+date       : 2017-08-31 12:00:00
+author     : "Yung-Sheng Lu"
+tags       : docoGen DocumentGenerator LateX JSON Markdown NodeJS ReactJS SemanticUI
+comments   : true
+signature  : true
+slides     : https://yungshenglu.github.io/slides/20170831_mc2017.html
+present    : https://slides.com/yungshenglu/mc2017/live
+---
+
+## About docoGen
+
+我與我的夥伴 [Kevin Cyu](https://kevinbird61.github.io/) 最近開發一個主打文件生成器 (Document Generator) 的專案 - **docoGen**。主要是透過 JSON 與 Markdown 編寫腳本，再將這些腳本生成出靜態網頁 **docoGen-WebU*8I、LaTeX PDF 等說明文件，未來還希望會支援多種模版。
+當初開發 docoGen 是希望團隊能快速的產生一個產品說明文件以及產品的介紹網站，另一方面也可以用於教材上面，可以生成上課用的講義以及對應的教學網站，提供學生以及有需求的其他人做檢視與閱讀。歡迎各位大神不吝賜教，有任何建議或是想法都歡迎和我們聯絡。
+
+**docoGen** is an open source project for convenient and widely used in document generation. Just write down your content in JSON format, then it will generate the general format, e.g., PDF for LaTex or web page (**docoGen-WebUI**).
+
+## References
+
+* [docoGen 中文簡易說明](http://slides.com/kevinbird61/docogen)
+* More about *docoGen*
+    * [docoGen GitHub](https://github.com/toolbuddy/docoGen)
+    * [docoGen Wiki](https://github.com/toolbuddy/docoGen/wiki)
+* More abour *docoGen-WebUI*
+    * [docoGen-WebUI GitHub](https://github.com/toolbuddy/docoGen-WebUI)
+    * [docoGen-WebUI Wiki](https://github.com/toolbuddy/docoGen-WebUI/wiki)
+
+## Contact
+
+* [Kevin Cyu](https://kevinbird61.github.io/)
+* [Yung-Sheng Lu](https://yungshenglu.github.io/)

@@ -1,7 +1,7 @@
 ---
 layout     : post
 title      : "Mobile Computing Workshop 2017 Sharing"
-subtitle   : "Conference Sharing"
+subtitle   : "Conferences Sharing"
 date       : 2017-08-31 12:00:00
 author     : "Yung-Sheng Lu"
 tags       : MobileComputing Conferences

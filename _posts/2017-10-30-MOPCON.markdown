@@ -1,7 +1,7 @@
 ---
 layout     : post
 title      : "MOPCON 2017 Sharing"
-subtitle   : "Conference Sharing"
+subtitle   : "Conferences Sharing"
 date       : 2017-10-30 12:00:00
 author     : "Yung-Sheng Lu"
 tags       : MOPCON Conferences
