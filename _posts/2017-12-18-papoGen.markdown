@@ -1,6 +1,6 @@
 ---
 layout     : post
-title      : "papoGen"
+title      : "papoGen - Webpage Generator"
 subtitle   : "NodeJS Modules"
 date       : 2017-12-18 18:00:00
 author     : "Yung-Sheng Lu"
