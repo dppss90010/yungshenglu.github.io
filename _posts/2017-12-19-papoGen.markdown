@@ -1,0 +1,36 @@
+---
+layout     : post
+title      : "papoGen - Webpage Generator"
+subtitle   : "Node.js Modules"
+date       : 2017-12-19 16:10:00
+author     : "Yung-Sheng Lu"
+tags       : papoGen WebpageGenerator JSON Markdown NodeJS PaperCSS Pug
+comments   : true
+signature  : true
+slides     : 
+present    : 
+---
+
+![](https://imgur.com/a/cFwz0)
+
+## About papoGen
+
+**papoGen** - 是由我的夥伴 [Kevin Cyu](https://kevinbird61.github.io/Intro/) 最近開發以 **Pug** 作為靜態網頁生成的工具，搭配 **PaperCSS** 作網頁的 UI Library，讓使用者可以在開發專案之餘，透過 JSON 與 Markdown 語法，快速生成一個專案網頁、產品說明網站，亦可以生成個人的網站，重點是**__「整體版面相當完善且快速生成」！！__**
+
+papoGen 主要透過 JSON 與 Markdown 編寫生成腳本，再將這些腳本經過 Pug 進行編譯，結合 PaperCSS 生成網頁個各個元件。paperGen 目前支援基本的文字 (Formal text) 與條列 (List)、圖像 (Image)、程式區塊 (Code block) 與數學公式 (Formula) 輸出。其中，數學公式的部分是以 **MathJax** 格式標準。圖像除了支援 Local 路徑的圖檔，也支援圖像網址 (Image address)，可以__直接將網頁上的圖像網址作為參數__引入，便可生成其圖像。
+
+papoGen 是希望團隊能快速的生成一個「產品的介紹網站」，另一方面可以用於「個人網站的快速生成」。歡迎各位大神不吝賜教，有任何建議或是想法都歡迎和我們聯絡。
+
+> papoGen 與 docoGen 都是 [Toolbuddy](https://github.com/toolbuddy) 團隊的作品！歡迎加入我們！
+
+## References
+
+* [papoGen GitHub](https://github.com/toolbuddy/papoGen)
+* [papoGen DEMO](https://toolbuddy.github.io/papoGen/)
+* Dependencies
+    * [PaperCSS](https://www.getpapercss.com/)
+    * [Pug](https://pugjs.org/api/getting-started.html)
+
+## Contact
+
+* [Kevin Cyu](https://kevinbird61.github.io/Intro/)
