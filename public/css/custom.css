@@ -294,6 +294,12 @@
     margin: 0 3% 0 0;
     vertical-align: middle;
 }
+.theme-base-chocolate .intro-title {
+    display: inline-block;
+    width: 79%;
+    vertical-align: middle;
+    font-size: 1rem;
+}
 .theme-base-chocolate .intro-message {
     display: inline-block;
     width: 79%;

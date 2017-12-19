@@ -1,13 +1,13 @@
 ---
 layout     : post
-title      : "papoGen - Webpage Generator"
-subtitle   : "Node.js Modules"
-date       : 2017-12-19 16:10:00
+title      : "papoGen"
+subtitle   : "NodeJS Modules"
+date       : 2017-12-18 18:00:00
 author     : "Yung-Sheng Lu"
 tags       : papoGen WebGenerator JSON Markdown NodeJS PaperCSS Pug
 comments   : true
 signature  : true
-slides     : null
+slides     : 
 present    : 
 ---
 

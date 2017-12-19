@@ -9,7 +9,7 @@ layout: default
       <i class="fa fa-clock-o fa-stack-1x"></i>
     </span>
     {{ page.date | date_to_string }}
-    {% if page.present != null %}
+    {% if page.slides != null %}
         <span class="post-slides" style="margin: 0 0.5em">
           <span class="fa-stack fa-sm">
             <i class="fa fa-bookmark fa-stack-1x"></i>
@@ -17,6 +17,7 @@ layout: default
           <a href="{{ page.slides }}">Slides</a>
         </span>
     {% endif %}
+    
     {% if page.present != null %}
         <span class="post-slides" style="margin: 0 0.5em">
           <span class="fa-stack fa-sm">
