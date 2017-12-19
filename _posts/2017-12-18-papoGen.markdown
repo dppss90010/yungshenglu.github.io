@@ -11,7 +11,7 @@ slides     :
 present    : 
 ---
 
-[papoGen](https://i.imgur.com/ts1PC5b.png)
+![papoGen](https://i.imgur.com/ts1PC5b.png)
 
 ## About papoGen
 
