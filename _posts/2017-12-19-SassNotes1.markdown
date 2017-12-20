@@ -1,6 +1,6 @@
 ---
 layout     : post
-title      : "Sass 學習筆記(1)"
+title      : "Sass 學習筆記 - Part 1. 簡介"
 subtitle   : "Web Programming Notes"
 date       : 2017-12-19 12:00:00
 author     : "Yung-Sheng Lu"
