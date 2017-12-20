@@ -34,7 +34,6 @@ present    :
 > * [輕量的標籤語言 HAML](http://ithelp.ithome.com.tw/articles/10128441)
 > * [What's the difference between SCSS and Sass?
 ](http://stackoverflow.com/questions/5654447/whats-the-difference-between-scss-and-sass)
-:::
 
 ---
 
@@ -60,25 +59,21 @@ present    :
 * **Windows**
     * 請先務必安裝 **Ruby**。
 
-        :::info 
-        :mega: **提示**
-        * 建議使用 [Ruby Installer](http://rubyinstaller.org/) 安裝 Ruby。
-        * Ruby Installer 會將 Ruby command line powershell 與 Ruby 函式庫一併安裝。
-        :::
+        > **提示**
+        > * 建議使用 [Ruby Installer](http://rubyinstaller.org/) 安裝 Ruby。
+        > * Ruby Installer 會將 Ruby command line powershell 與 Ruby 函式庫一併安裝。
 
     * 安裝完畢 Ruby 後，開啓 Ruby command line powershell 安裝 Sass (請參考以下 **建議步驟**)。
 * 建議步驟
-    * 開啓 Terminal 或 Command Prompt。 
+    * 開啓 Terminal 或 Command Prompt。
     * 安裝 Sass
         ```bash
         # 以下二種擇一安裝即可。
         $ gem install sass
         $ sudo gem install sass
         ```
-        :::info
-        :mega: **提示**
-        * Ruby 透過 **`Gems`** 管理各種不同的套件
-        :::
+        > **提示**
+        > * Ruby 透過 **`Gems`** 管理各種不同的套件
     * 確認版本
         * 安裝完畢後，可以輸入以下指令確認安裝的版本。
             ```bash
