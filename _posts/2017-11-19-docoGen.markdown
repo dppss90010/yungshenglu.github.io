@@ -11,6 +11,8 @@ slides     : https://yungshenglu.github.io/slides/20171119_docoGen.html
 present    : 
 ---
 
+![docoGen](https://i.imgur.com/fkx11KR.png)
+
 ## About docoGen
 
 **docoGen** - 是我與我的夥伴 [Kevin Cyu](https://kevinbird61.github.io/Intro/) 最近開發一個主打文件生成器 (Document Generator) 的專案。主要是透過 JSON 與 Markdown 編寫腳本，再將這些腳本生成出靜態網頁 **docoGen-WebUI**、LaTeX PDF 等說明文件，未來還希望會支援多種模版。
