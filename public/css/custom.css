@@ -302,7 +302,7 @@
 }
 .theme-base-chocolate .intro-message {
     display: inline-block;
-    width: 79%;
+    width: 100%;
     vertical-align: middle;
     font-size: 0.75rem;
 }
