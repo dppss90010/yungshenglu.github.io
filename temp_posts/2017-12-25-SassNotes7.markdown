@@ -1,0 +1,63 @@
+---
+layout     : post
+title      : "Sass 學習雜記 - Part 7. 開發與維護(1)"
+subtitle   : "Web Programming Notes"
+date       : 2017-12-25 12:00:00
+author     : "Yung-Sheng Lu"
+tags       : Sass WebProgramming
+comments   : true
+signature  : true
+slides     : 
+present    : 
+---
+
+![Sass](https://i.imgur.com/7vx71Hx.png)
+
+## Part 7. 開發與維護(1)
+
+> 在前面幾篇的分享中，針對 Sass 的觀念與運算作介紹。然而，Sass 除了能大幅縮減過去 CSS 的撰寫篇幅，但是若不能有良好的架構，則會顯得十分糟糕，因此本章將針對 Sass 開發上的架構與維護進行說明。
+
+### 7.1 規劃架構
+
+* 對於一個良好的網站開發，前端的架構十分重要，尤其是龐大且複雜的網頁更是如此，因此我們將從架構面開始着手。
+* 以下是一個架構良好的 Sass 檔案之案例，值得注意的是，此架構對針對每一個元件以及對應的變數與函式的檔案位置配置。
+
+![SassStructure](https://s3.amazonaws.com/codecademy-content/courses/Sass/sass_structure.svg)
+
+---
+
+### 7.2 檔案引入與切割
+
+對於開發大型專案，我們一般會將其中的各個元件分別完成，最後在逐一整併。如此不但對於日後維護更佳容易，也更適合擴大專案規模。
+
+#### 7.2.1 檔案引入
+
+* Sass 中延續 CSS 的 `@import` 功能，允許引入外部的 SCSS 或是 Sass 檔案。
+    * 一般而言，所有引入的 SCSS 檔案都將引入到主要的 SCSS 檔案中，再由此主要的 SCSS 檔案編譯成 **一份 CSS 檔案** 。
+    * 主要的 SCSS 檔案中可以存取定義在其他檔案中的任一個變數 (Variables) 或組合 (Mixins)
+    * `@import` 指令透過 **檔案名稱** 作爲外部檔案的引入。
+* 檔案引入除了對於架構的組織上更有邏輯，也能減少反覆撰寫相同的程式。
+
+#### 7.2.2 檔案切割
+
+* Sass 提供以 **Partials** 的方式將檔案引入，而所謂的 Partials 其實就是我們將檔案分割成各個部分，並組織成各個獨立的功能。
+* 在 Sass 中，以符號 **`_`** 作爲這些 **Partials 的檔案名稱中的前綴符號**。
+    ```sass
+    _filename.scss
+    ```
+* 當要引入這些 Partials 或是要將其封裝成一個模組時，可以省略檔名中的 `_` 直接列出檔名即可。以下範例爲引入檔名爲 `_test.scss`。
+    ```sass
+    @import "test";
+    ```
+
+---
+
+## References
+
+* [Sass/SCSS 簡明入門教學](http://blog.kdchang.cc/2016/10/11/sass-scss-tutorial-introduction/)
+* [30天掌握Sass語法 - (5)利用Sass「@import」進行CSS檔案模組切割](https://ithelp.ithome.com.tw/articles/10127832)
+* [30天掌握Sass語法 - (18)規劃你的Sass結構](https://ithelp.ithome.com.tw/articles/10132821)
+* [SCSS 15分鐘入門](http://eddychang.me/blog/others/91-scss-15-mins.html)
+* [Codecademy - Learn Sass](https://www.codecademy.com/learn/learn-sass)
+
+> 如果你有任何建議與指教，歡迎於下方留言一起討論喔！

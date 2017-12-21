@@ -1,0 +1,105 @@
+---
+layout     : post
+title      : "Sass 學習雜記 - Part 5. 函式與運算"
+subtitle   : "Web Programming Notes"
+date       : 2017-12-23 12:00:00
+author     : "Yung-Sheng Lu"
+tags       : Sass WebProgramming
+comments   : true
+signature  : true
+slides     : 
+present    : 
+---
+
+![Sass](https://i.imgur.com/7vx71Hx.png)
+
+## Part 5. 函式與運算
+
+> 在 Sass 中，除了上一章所提到的三大基本觀念外，Sass 提供多 **函式 (Functions)** 亦即 **運算 (Operations)** 讓原本 CSS 撰寫起來更佳便利。
+
+### 5.1 函式 (Functions)
+
+Sass 中支援許多新的函式，增強原本 CSS 不足的部分。以下將以 *顏色函式 (Color functions)* 爲例作說明。
+
+#### 5.1.1 函式使用
+
+* CSS 中對於顏色的設定提供許多表示的方式，而其中 `rgba()` 與 `hsla()` 在顏色的呈現方面增加 **透明度 (Opacity)** 的表示。
+* Sass 中的 **`fade-out()`** 與 **`fade-in()`** 函式提供更多顏色在 *透明度* 上的呈現。
+    * 函式 **`fade-out()`** 藉由數值 `0` 至 `1` 作爲 **減少透明度** 的表示方式。
+        ```sass=0
+        $color1: rgba(39, 39, 39, 0.5);
+        $amount: 0.1;
+        /* rgba(39, 39, 39, 0.4) */
+        $color2: fade-out($color, $amount); 
+        ```
+    * 函式 **`fade-in()`** 藉由數值 `0` 至 `1` 作爲 **增加透明度** 的表示方式。
+        ```sass=0
+        $color1: rgba(39, 39, 39, 0.5);
+        $amount: 0.1;
+        /* rgba(39, 39, 39, 0.6) */
+        $color2: fade-in($color, $amount); 
+        ```
+
+#### 5.1.2 函式運算
+
+* 除了上述 Sass 所提供的函式，Sass 也支援數學函式提供數值上的計算結果。以下以 *顏色運算* 作爲說例。
+    ```sass
+    $color: #010203 + #040506;
+    ```
+    * 上述程式中，顏色運算將個別對 *紅色*，*綠色* 與 *藍色* 進行計算，因此將 *每二個數值爲一組* 分別計算，如下所示：
+        ```sass
+        01 + 04 = 05
+        02 + 05 = 07
+        03 + 06 = 09
+        ```
+    * 最後顏色計算結果如下所示：
+        ```sass
+        $color: #050709;
+        ```
+* Sass 同時支援 `rgba()`，`hsla()` 與字串表示 (如：`red` 或 `blue`) 的顏色計算。
+
+
+> **補充**
+> * [Sass Funtions](http://sass-lang.com/documentation/Sass/Script/Functions.html)
+
+---
+
+### 5.2 數學運算
+
+* Sass 中支援以下數學運算：
+    * 加法運算 (Addition)
+    * 減法運算 (Subtraction)
+    * 乘法運算 (Multiplication)
+    * 除法運算 (Division)
+    * 餘數運算 (Modulo)
+* 在數學運算中，只允許 **單位相同** 的數值進行運算。
+    * 如：無法同時對 `px` 與 `em` 進行運算。
+* 在乘法運算中，二個數值相乘的結果其單位爲 **原本單位的平方**。
+    * 如：`10px * 10px = 100px * px`。
+* 在除法運算中，其實是在進行 **平分** 的概念。
+    * 被除數的部分可以是 **變數** 或 **函式回傳的數值**。
+    * 被除數部分可以使用 **小括弧 (`( )`)** 括住。
+    * 被除數部分可以是另一個運算式。
+    ```sass
+    /* 是除法運算 */
+    width: $var / 6;
+    /* 是除法運算 */
+    line-height: (600px) / 6;
+    /* 是除法運算 */
+    margin-left: 20-10 px / 2;
+    /* 非除法運算 */
+    font-size: 10px / 8px;
+    ```
+
+---
+
+## References
+
+* [Sass/SCSS 簡明入門教學](http://blog.kdchang.cc/2016/10/11/sass-scss-tutorial-introduction/)
+* [30天掌握Sass語法 - (4)利用Sass「內建計算機」，讓你不用再重複計算CSS像素](https://ithelp.ithome.com.tw/articles/10127521)
+* [30天掌握Sass語法 - (22)Sass顏色函數介紹](https://ithelp.ithome.com.tw/articles/10134544)
+* [30天掌握Sass語法 - (25) 透過index()與nth()來設計網站版本樣式控制管理](https://ithelp.ithome.com.tw/articles/10135991)
+* [SCSS 15分鐘入門](http://eddychang.me/blog/others/91-scss-15-mins.html)
+* [Codecademy - Learn Sass](https://www.codecademy.com/learn/learn-sass)
+
+> 如果你有任何建議與指教，歡迎於下方留言一起討論喔！

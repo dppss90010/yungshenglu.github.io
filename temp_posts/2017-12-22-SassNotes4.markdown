@@ -1,0 +1,195 @@
+---
+layout     : post
+title      : "Sass 學習雜記 - Part 4. 組合表示"
+subtitle   : "Web Programming Notes"
+date       : 2017-12-22 12:00:00
+author     : "Yung-Sheng Lu"
+tags       : Sass WebProgramming
+comments   : true
+signature  : true
+slides     : 
+present    : 
+---
+
+![Sass](https://i.imgur.com/7vx71Hx.png)
+
+## Part 4. 組合表示 (Mixins)
+
+> Sass 爲解決過去 CSS 許多 **不便** 的地方，因此提供許多額外的指令讓 CSS 撰寫起來更有效率且簡潔。本章將開始介紹 Sass 的三大觀念： **變數表示 (Variables)** ， **巢狀表示 (Nesting)** ， **組合表示 (Mixins)** 。以下將說明 **組合表示 (Mixins)** 的部分。
+
+* 除了上述的巢狀表示 (Nesting) 與變數表示 (Variables)，Sass 也提供 **多重建構 (Multiple construct)** 的方式能**大幅減少反覆撰寫**的困擾。
+
+### 4.1 組合表示
+
+* Sass 中的 **組合表示 (Mixins)** 允許我們將原本 CSS 中的宣告包裝成一個獨立的組合，讓往後撰寫 CSS 可以直接重複使用。
+* Sass 中的 **組合表示 (Mixins)** 在概念上可以理解爲一般程式中的 **函式 (Function)**。
+* 在 Sass 中，以符號 **`@mixin`** 來宣告組合。
+    ```sass=0
+    @mixin backface-visibility {
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
+    }
+    ```
+* 欲呼叫定義好的組合時，使用 **`@include`** 指令。
+    ```sass=0
+    .parent {
+        height: 100%;
+        position: absolute;
+        width: 100%;
+
+        @include backface-visibility;
+    }
+    ```
+    * 以上 Sass 將會編譯成以下的 CSS：
+        ```css=0
+        .parent {
+            height: 100%;
+            position: absolute;
+            width: 100%;
+
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            -ms-backface-visibility: hidden;
+            -o-backface-visibility: hidden;
+        }
+        ```
+
+---
+
+### 4.2 進階組合表示
+
+* Sass 中的組合表示 (Mixins) 可以 **附帶參數**，概念如同 **類別 (Class)**。
+    ```sass=0
+    @mixin backface-visibility($visibility) {
+        backface-visibility: $visibility;
+        -webkit-backface-visibility: $visibility;
+        -moz-backface-visibility: $visibility;
+        -ms-backface-visibility: $visibility;
+        -o-backface-visibility: $visibility;
+    }
+    ```
+    * 欲呼叫 `backface-visibility` 時，可直接將屬性值代入。
+        ```sass=0
+        .parent {
+            height: 100%;
+            position: absolute;
+            width: 100%;
+
+            @include backface_visibility(hidden);
+        }
+        ```
+* Sass 中的組合表示 (Mixins) 的附帶參數可以給定 **預設值 (Default Value)** 。
+    ```sass=0
+    @mixin backface-visibility($visibility: hidden) {
+        backface-visibility: $visibility;
+        -webkit-backface-visibility: $visibility;
+        -moz-backface-visibility: $visibility;
+        -ms-backface-visibility: $visibility;
+        -o-backface-visibility: $visibility;
+    }
+    ```
+    * 欲呼叫 `backface-visibility` 卻沒有指定值代入時，會將預設值代入。
+* Sass 中的組合表示 (Mixins) 的附帶 **多個參數** 。
+    ```sass=0
+    @mixin stripes($direction, $width-percent, $stripe-color, $stripe-background: #FFFFFF) {
+        background: repeating-linear-gradient(
+            $direction,
+            $stripe-background,
+            $stripe-background ($width-percent - 1),
+            $stripe-color 1%,
+            $stripe-background $width-percent
+        );
+    }
+
+    /* 定義多個參數組合 */
+    $stripe-style: (
+        direction: to bottom,
+        width-percent: 15%;
+        stripe-color: #FF0000;
+        stripe-background: #FFFFFF;
+    );
+    ```
+    * 欲呼叫 `stripe` 時，可以將事先定義的 **多個參數組合** 代入。
+        ```sass=0
+        .parent {
+            height: 100%;
+            width: 100%;
+
+            @include stripes($stripe-style);
+        }
+        ```
+
+### 4.3 字串內插 (String interpolation)
+
+* Sass 的字串內插是將一個字串型態的變數**放置在二個字串之間**。
+* 對於 Sass 的組合表示而言，字串內插允許我們能在選取項中重複使用 **相同的字串變數** 或 **檔案名稱**。
+* 在 Sass 中，以符號 **`#{$variable}`** 來表示字串內插。
+    ```sass=0
+    @mixin photo-content($file) {
+        /* 字串內插 */
+        content: url(#{$file}.jpg);
+        object-fit: cover;
+    }
+    
+    .photo {
+        @include photo-content('test');
+        margin: 0px auto;
+        width: 60%;
+    }
+    ```
+    * 以上 Sass 將會編譯成以下的 CSS：
+        ```css=0
+        .photo {
+            content: url(test.jpg);
+            margin: 0px auto;
+            width: 60%;
+        }
+        ```
+
+### 4.4 Pseudo-class 與 Pseudo-element 的巢狀組合表示
+
+* Sass 中允許 **`&` 選取項** 在組合表示中使用。[請參考 2.1.3]
+* 若在使用 `&` 選取項找不到對應的母代選取項 時，則 Sass 會回傳錯誤訊息。
+* 以下 Sass 程式中的 `&` 會根據所呼叫選取項找到對應的 **母代選取項** 。
+    ```sass=0
+    @mixin text-hover($color) {
+        &:hover {
+            color: $color;
+        }
+    }
+    
+    .word {
+        display: block;
+        position: relative;
+        top: 40%;
+        text-align: center;
+        @include text-hover(red);
+    }
+    ```
+    * 以上 Sass 將會編譯成以下的 CSS：
+        ```css=0
+        .word {
+            display: block;
+            position: relative;
+            top: 40%;
+            text-align: center;
+        }
+        .word:hover {
+            color: red;
+        }
+        ```
+
+---
+
+## References
+
+* [Sass/SCSS 簡明入門教學](http://blog.kdchang.cc/2016/10/11/sass-scss-tutorial-introduction/)
+* [30天掌握Sass語法 - (6)利用Sass「@mixin」，讓你省去重複撰寫相同CSS樣式的時間](https://ithelp.ithome.com.tw/articles/10128138)
+* [SCSS 15分鐘入門](http://eddychang.me/blog/others/91-scss-15-mins.html)
+* [Codecademy - Learn Sass](https://www.codecademy.com/learn/learn-sass)
+
+> 如果你有任何建議與指教，歡迎於下方留言一起討論喔！

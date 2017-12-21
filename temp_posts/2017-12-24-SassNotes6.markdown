@@ -1,0 +1,116 @@
+---
+layout     : post
+title      : "Sass 學習雜記 - Part 6. 條件與迴圈"
+subtitle   : "Web Programming Notes"
+date       : 2017-12-24 12:00:00
+author     : "Yung-Sheng Lu"
+tags       : Sass WebProgramming
+comments   : true
+signature  : true
+slides     : 
+present    : 
+---
+
+![Sass](https://i.imgur.com/7vx71Hx.png)
+
+## Part 6. 條件與迴圈
+
+### 6.1 條件運算 (Conditions)
+
+* Sass 提供的條件運算，其概念與一般程式中的 `if-else` 概念相同。
+*  在 Sass 中，以符號 **`@if`**，**`@else-if`** 與 **`@else`** 進行條件運算。
+    ```sass=0
+    @if( /* Condition-1 */ ) {
+        /* Declarations */
+    }
+    @else-if( /* Condition-2 */ ) {
+        /* Declarations */
+    }
+    @else( /* Condition-3 */ ) {
+        /* Declarations */
+    }
+    ```
+
+> **注意**
+> * 條件運算 `@if`、`@else-if` 和 `@else` 與連接條件的括弧之間 **不可以有空格** 。
+>   ```sass=0
+>   /* Error */
+>   @if (/* Condition-1 */ ) {
+>       ...
+>   }
+>   @else-if (/* Condition-2*/ ) {
+>       ...
+>   } 
+>   @else ( /*Condition-3*/ ) {
+>       ...
+>   }
+>   ```
+
+* 除了上述的表示方式，對於 CSS 屬性也支援 `if-else` 運算。
+    ```sass=0
+    .parent {
+        width: if($condition, $value-if-true, $value-if-false);
+    }
+    ```
+    * 範例
+        ```sass=0
+        width: if($i % 2 == 0, 300px, 350px);
+        margin-left: if($i % 2 == 0, 0px, 50px);
+
+---
+
+### 6.2 迴圈運算 (Loops)
+
+#### 6.2.1 Each 迴圈
+
+* Sass 提供的 **Each 迴圈** 針對清單 (List) 中的每一項值進行迭代運算。
+* 在 Sass 中，以符號 **`@each`** 進行迴圈運算。
+    ```sass=0
+    @each $item in $list {
+        /* Declarations */
+    }
+    ```
+    * 變數 `$item` 將動態代入 `$list` 的每一項進入迴圈。
+* 範例
+    ```sass=0
+    $list: (orange, purple, teal);
+
+    @each $item in $list {
+      .#{$item} {
+        background: $item;
+      }
+    }
+    ```
+
+#### 6.2.2 For 迴圈
+
+* Sass 提供的 **For 迴圈** 運算，其概念與一般程式中的 `for` 迴圈概念相同，需給定迴圈的 **起始值** 與 **終止值**。
+* 在 Sass 中，以符號 **`@for`** 進行迴圈運算。
+    ```sass=0
+    @for $i from $begin through $end {
+        /* Declarations */
+    }
+    ```
+    * 變數 `$i` 僅作爲清單 (List) 中元素都編號。
+    * 變數 `$begin` 與 `$end` 作爲迴圈的起始點與終止點。
+    * 關鍵字 `through` 與 `to` 可以交換使用。
+* 範例
+    ```sass=0
+    @for $i from 1 through $total {
+      .ray:nth-child(#{$i}) {
+        background: adjust-hue(blue, $i * $step);
+      }
+    }
+    ```
+
+---
+
+## References
+
+* [Sass/SCSS 簡明入門教學](http://blog.kdchang.cc/2016/10/11/sass-scss-tutorial-introduction/)
+* [30天掌握Sass語法 - (27) 使用@if提升@Mixin靈活度，以CSS圖形化為例](https://ithelp.ithome.com.tw/articles/10136641)
+* [30天掌握Sass語法 - (29) @for+random()創造無限可能](https://ithelp.ithome.com.tw/articles/10137464)
+* [SCSS 15分鐘入門](http://eddychang.me/blog/others/91-scss-15-mins.html)
+* [Codecademy - Learn Sass](https://www.codecademy.com/learn/learn-sass)
+
+> 如果你有任何建議與指教，歡迎於下方留言一起討論喔！

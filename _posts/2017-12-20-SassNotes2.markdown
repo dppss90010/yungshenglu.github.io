@@ -1,0 +1,64 @@
+---
+layout     : post
+title      : "Sass 學習雜記 - Part 2. 變數表示"
+subtitle   : "Web Programming Notes"
+date       : 2017-12-20 12:00:00
+author     : "Yung-Sheng Lu"
+tags       : Sass WebProgramming
+comments   : true
+signature  : true
+slides     : 
+present    : 
+---
+
+![Sass](https://i.imgur.com/7vx71Hx.png)
+
+## Part 2. 變數表示 (Variables)
+
+> Sass 爲解決過去 CSS 許多 **不便** 的地方，因此提供許多額外的指令讓 CSS 撰寫起來更有效率且簡潔。本章將開始介紹 Sass 的三大觀念： **變數表示 (Variables)** ， **巢狀表示 (Nesting)** ， **組合表示 (Mixins)** 。以下將說明 **變數表示 (Variables)** 的部分。
+
+* Sass 的變數表示允許我們 **任意定義變數並給與特定值**。
+* 過去撰寫 CSS 最大的困擾便是，*同一個屬性因爲在不同的選取項下而要給定許多不同的值*。
+    * 這樣的過程對於網頁開發與維護相當不便，一旦要改變部分 選取項下的同一個屬性時，只能逐一去修改。
+    * Sass 提供變數表示的方式，可以事先宣告需有相同屬性值的變數，並代入各個屬性中。
+
+### 2.1 變數表示
+
+* 在 Sass 中，以符號 **`$`** 作爲變數宣告的前綴符號。
+    ```sass
+    $translucent-white: rgba(255, 255, 255, 0.3);
+
+    .selector {
+        backgrond-color: $translucent-white;
+    }
+    ```
+* **變數名稱的宣告務必清楚。**
+
+### 2.2 變數型態
+
+* **數值 (Numbers)**
+    * 若變數爲 **數值與單位** 的組合仍然爲 **數值型態** 。如：`10px`，`0.2em`，`100%`等。 
+* **字串 (Strings)**
+    * 不論是否包含 **引號 (`' '`)**，皆屬於 **字串型態** 。如：`'apple'`，`center`，`bold`等。
+* **布林值 (Booleans)**
+    * 包含 `true` 與 `false`。
+* **空值 (Null)**
+    * 可以視爲 empty value。
+* **清單 (Lists)**
+    * 能以 **空格** 或 **逗號 (`,`)** 分開。如：`1.5em Helvetica bold;` 或 `Helvetica, Arial, sans-serif;`。
+    * 能以 **小括弧 (`( )`)** 括住且可用清單組合出新的 清單。
+* **Maps**
+    * 與清單的概念相似，但是之中的每一項是 **key-value 序對** 。如：`(key1: value1, key2: value2)`。
+    * 在 Map 中的每一個 Key 所對應的 value 可以是一個 List 或另一個 Map。
+
+---
+
+## References
+
+* [Sass/SCSS 簡明入門教學](http://blog.kdchang.cc/2016/10/11/sass-scss-tutorial-introduction/)
+* [30天掌握Sass語法 - (3)如何透過「變數」提升撰寫CSS效率](https://ithelp.ithome.com.tw/articles/10127206)
+* [30天掌握Sass語法 - (11)覺得Sass的寫法不適合你寫CSS嗎？那試試看SCSS吧！](https://ithelp.ithome.com.tw/articles/10130129)
+* [SCSS 15分鐘入門](http://eddychang.me/blog/others/91-scss-15-mins.html)
+* [Codecademy - Learn Sass](https://www.codecademy.com/learn/learn-sass)
+
+> 如果你有任何建議與指教，歡迎於下方留言一起討論喔！

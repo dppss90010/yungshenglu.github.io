@@ -1,0 +1,107 @@
+---
+layout     : post
+title      : "Sass 學習雜記 - Part 3. 巢狀表示"
+subtitle   : "Web Programming Notes"
+date       : 2017-12-21 12:00:00
+author     : "Yung-Sheng Lu"
+tags       : Sass WebProgramming
+comments   : true
+signature  : true
+slides     : 
+present    : 
+---
+
+![Sass](https://i.imgur.com/7vx71Hx.png)
+
+## Part 3. 巢狀表示 (Nesting)
+
+> Sass 爲解決過去 CSS 許多 **不便** 的地方，因此提供許多額外的指令讓 CSS 撰寫起來更有效率且簡潔。本章將開始介紹 Sass 的三大觀念： **變數表示 (Variables)** ， **巢狀表示 (Nesting)** ， **組合表示 (Mixins)** 。以下將說明 **巢狀表示 (Nesting)** 的部分。
+
+* Sass 的巢狀表示和一般我們學習函式類型語言的概念相同，而對於 Sass 而言即是將選取項 (Selector) 放入另一個選取項的可視範圍 (Scope)。
+* 在一般程式中，變數的可視範圍包含變數的宣告至變數可使用的範圍。
+* 在 Sass 中，可以將選取項的可視範圍看成 **在大括號 (`{ }`) 中間的區塊**。
+
+### 3.1 巢狀概念
+
+* 若有選取項 (Selector) 在另一個選取項內部時，我們稱內部的 選取項爲外部選取項的 **子代選取項 (Child selector)** ，相對外部的選取項即爲內部選取項的 **母代選取項 (Parent selector)** 。
+* 此關係如同 HTML 中元件之間的對應。
+* 說例：以下`.child` 爲子代選取項而 `.parent` 爲母代選取項。
+    ```sass=0
+    .parent {
+        color: #FFFFFF;
+        .child {
+            font-size: 12px;
+        }
+    }
+    ```
+* 上述 SCSS 的效果等同以下 CSS 語法。
+    ```css=0
+    .parent {
+        color: #FFFFFF;
+    }
+
+    .parent .child {
+        font-size: 12px;
+    }
+    ```
+* Sass 的巢狀表示可以清楚表示 DOM 在選取項 (Selector) 之間的關係，同時也減少原本 CSS 反覆撰寫的困擾。
+
+---
+
+### 3.2 屬性的巢狀表示
+
+* 在 SCSS 之中，巢狀表示不限於在選取項。**CSS 的屬性亦能以巢狀表示**。
+* 在 CSS 之中，屬於相同類別的屬性會有 **相同的前綴表示**。說例如下：
+    * `font-family` 與 `font-size` 都屬於 `font` 類別下的屬性，即具有相同類別的屬性。
+    * `border-color` 與 `border-radius` 都屬於 `border` 類別下的屬性，即具有相同類別的屬性。
+    * 具有相同類別的屬性還有許多說例，只要滿足 **相同的前綴表示** 即是。
+* 範例：以下 Sass 程式將原本 CSS 中的 `font` 屬性以巢狀表示。 
+    ```sass=0
+    .parent {
+        font: {
+            family: Roboto, sans-serif;
+            size: 12px;
+            weight: bold;
+        }
+    }
+    ```
+    * 以上 Sass 將會編譯成以下的 CSS：
+        ```css=0
+        .parent {
+            font-family: Roboto, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        ```
+
+---
+
+### 3.3 Pseudo-class 與 Pseudo-element 的巢狀表示
+
+* CSS 的 Pseudo-class 與 Pseudo-element
+    * **Pseudo-class** 是針對 HTML 元件在**特定狀態**的呈現。如：常見的`:hover`，`:focus` 等。
+    * **Pseudo-element** 是針對 HTML 元件中的**特定部分**呈現。如：常見的`::before`，`::after` 等。
+* 在 Sass 中，以符號 `&` 來表示其母代選取項 (Parent selector) 需要被置入。同時也解決反覆撰寫 pseudo-class 的困擾。
+    ```sass=0
+    .parent {
+        &:hover {
+            font-size: 20px;
+        }
+    }
+    ```
+    * 以上 Sass 將會編譯成以下的 CSS：
+        ```css=0
+        .parent:hover {
+            font-size: 20px;
+        }
+        ```
+
+---
+
+## References
+
+* [Sass/SCSS 簡明入門教學](http://blog.kdchang.cc/2016/10/11/sass-scss-tutorial-introduction/)
+* [SCSS 15分鐘入門](http://eddychang.me/blog/others/91-scss-15-mins.html)
+* [Codecademy - Learn Sass](https://www.codecademy.com/learn/learn-sass)
+
+> 如果你有任何建議與指教，歡迎於下方留言一起討論喔！

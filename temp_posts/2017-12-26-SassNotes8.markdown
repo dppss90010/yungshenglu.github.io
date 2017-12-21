@@ -1,0 +1,99 @@
+---
+layout     : post
+title      : "Sass 學習雜記 - Part 8. 開發與維護(2)"
+subtitle   : "Web Programming Notes"
+date       : 2017-12-26 12:00:00
+author     : "Yung-Sheng Lu"
+tags       : Sass WebProgramming
+comments   : true
+signature  : true
+slides     : 
+present    : 
+---
+
+![Sass](https://i.imgur.com/7vx71Hx.png)
+
+## Part 8. 開發與維護(2)
+
+> 在前面幾篇的分享中，針對 Sass 的觀念與運算作介紹。然而，Sass 除了能大幅縮減過去 CSS 的撰寫篇幅，但是若不能有良好的架構，則會顯得十分糟糕，因此本章將針對 Sass 開發上的架構與維護進行說明。
+
+### 8.1 Extend
+
+* CSS 中常見發生某一個元件需要延續另一個元件的設定作 **部分修改** 的情形，而過去我們通常會將這二個元件設定一個 **相同的 `class` 名稱**，然後針對需要部分修改的元件額外多取一個新的 `class` 名稱。
+    ```html
+    <span class="test"></span>
+    <span class="test span-2">
+    ```
+    * 上述情形會有一個潛在性的問題，當要執行第二個 `<span>` 的 CSS 時就必須同時列出兩個 `class` 名稱。
+* 爲解決上述問題，Sass 提供 `@extend` 語法，可以直接延續 `class=test` 的 CSS 進行修改，避免因疏忽而發生的錯誤。
+    ```sass
+    .test {
+        background-color: #FFDDDD;
+        border: 1px solid yellow;
+    }
+    
+    .span-2 {
+        @extend .test
+        border-color: pink;
+    }
+    ```
+    * 以上 Sass 將會編譯成以下的 CSS：
+        ```css
+        .test,
+        .span-2 {
+            background-color: #FFDDDD;
+            border: 1px solid yellow;
+        }
+        
+        .span-2 {
+            @extend .test
+            border-color: pink;
+        }
+        ```
+    * Sass 中的 `@extend` 概念類似一般物件導向程式中的 **繼承**。上述程式中，`.test` 可以稱作 **被繼承者**，而 `.span-2` 稱作 **繼承者**。
+
+> **提示 - `@extend` 與 `@mixin` 的差異性**
+> * `@extend` 主要用於 **合併相同程式碼**。若程式碼中有部分的 CSS 段落都長得一模一樣，此時可以使用 `@extend` 來進行合併，與物件導向語言所使用的 **繼承** 有異曲同工之妙。
+> * `@mixin` 主要用於 **壓縮程式碼段落**。對於許多 CSS 段落日後需要反覆使用，建議可以使用 `@mixin` 整理，日後只需呼叫 `@mixin` 的名稱即可使用。此外，可以透過 **代入參數** 的特性，大量反覆使用這些片段，與物件導向語言所使用的 **多型** 有異曲同工之妙。
+
+---
+
+### 8.2 Placeholders
+
+* 在開發網頁中，我們時常會針對每個元件給與 `class` 屬性，但卻從未使用過這個 `class` 名稱。
+* Sass 中針對上述問題提供一個特別的選取項型態稱作 **Placeholders**。
+* **Placeholders 的效果等同於類型 (Class) 與 識別 (ID) 選取項**，符號上使用 **`%`** 而非類型選取項所使用的 `.` 或識別選取項所使用的 `#`。
+* Placeholders 保留原本 CSS 的規則，且 **只有當使用 `@extend` 才會有作用**。
+    ```sass
+     a%drink {
+        font-size: 2em;
+        background-color: $lemon-yellow;
+     }
+
+     .lemonade {
+         @extend %drink;
+         /* more */
+     }
+    ```
+    * 以上 Sass 將會編譯成以下的 CSS：
+        ```css
+        a.lemonade {
+            font-size: 2em;
+            background-color: $lemon-yellow;
+         }
+
+        .lemonade {
+             /* more */
+        }
+        ```
+
+---
+
+## References
+
+* [Sass/SCSS 簡明入門教學](http://blog.kdchang.cc/2016/10/11/sass-scss-tutorial-introduction/)
+* [30天掌握Sass語法 - (7)利用Sass「@extend」，讓你無痛合併CSS樣式](https://ithelp.ithome.com.tw/articles/10128359)
+* [SCSS 15分鐘入門](http://eddychang.me/blog/others/91-scss-15-mins.html)
+* [Codecademy - Learn Sass](https://www.codecademy.com/learn/learn-sass)
+
+> 如果你有任何建議與指教，歡迎於下方留言一起討論喔！

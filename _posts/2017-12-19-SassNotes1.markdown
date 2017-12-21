@@ -1,6 +1,6 @@
 ---
 layout     : post
-title      : "Sass 學習筆記 - Part 1. 簡介"
+title      : "Sass 學習雜記 - Part 1. 簡介"
 subtitle   : "Web Programming Notes"
 date       : 2017-12-19 12:00:00
 author     : "Yung-Sheng Lu"
@@ -13,11 +13,11 @@ present    :
 
 ![Sass](https://i.imgur.com/7vx71Hx.png)
 
-## **Part 1. 簡介**
+## Part 1. 簡介
 
 > 關於 Sass 的學習，建議先對 **CSS** 已經有一定熟識程度，再學習 Sass 效果會更佳。
 
-### **1.1 何謂 Sass/SCSS ？**
+### 1.1 何謂 Sass/SCSS ？
 
 * Sass 全名爲 Syntactically Awesome StyleSheets，是一種 **CSS 的擴充語言** ，即為 **CSS 的超集合** 。
 * Sass 解決 CSS 常見的「重複撰寫」以及「維護困難」等問題，讓原本的 CSS 語法更簡潔、更富語意、可維護性與可延展性佳。 
@@ -37,11 +37,11 @@ present    :
 
 ---
 
-### **1.2 開始 Sass**
+### 1.2 開始 Sass
 
-> 在開始介紹 Sass 特性之前，我們先來學習如何將 Sass 轉譯成 CSS。
+在開始介紹 Sass 特性之前，我們先來學習如何將 Sass 轉譯成 CSS。
 
-#### **1.2.1 安裝 Sass**
+#### 1.2.1 安裝 Sass
 
 * **Linux**
     * 請務必先安裝 **Ruby**。
@@ -86,7 +86,7 @@ present    :
     > **提示**
     > * [Sass 官方安裝說明](http://sass-lang.com/install)
             
-#### **1.2.2 編譯 Sass**
+#### 1.2.2 編譯 Sass
 
 * Sass 和 CSS 不同，無法透過瀏覽器直譯，因此在使用前必須將 Sass 編譯成 CSS。
 * 如何將 Sass 編譯成 CSS？
