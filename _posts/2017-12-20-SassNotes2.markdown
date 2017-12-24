@@ -25,7 +25,7 @@ present    :
 ### 2.1 變數表示
 
 * 在 Sass 中，以符號 **`$`** 作爲變數宣告的前綴符號。
-    ```sass
+    ```sass=0
     $translucent-white: rgba(255, 255, 255, 0.3);
 
     .selector {
