@@ -15,11 +15,15 @@ present    :
 
 ## Part 6. 條件與迴圈
 
+> Sass 除了提供 **函式 (Functions)** 與 **運算 (Operations)** ，還支援 **條件運算 (Conditions)** 與 **迴圈運算 (Loops)** 讓原本 CSS 撰寫起來更佳有彈性與簡潔。
+
+---
+
 ### 6.1 條件運算 (Conditions)
 
 * Sass 提供的條件運算，其概念與一般程式中的 `if-else` 概念相同。
 *  在 Sass 中，以符號 **`@if`**，**`@else-if`** 與 **`@else`** 進行條件運算。
-    ```sass=0
+    ```scss
     @if( /* Condition-1 */ ) {
         /* Declarations */
     }
@@ -33,7 +37,7 @@ present    :
 
 > **注意**
 > * 條件運算 `@if`、`@else-if` 和 `@else` 與連接條件的括弧之間 **不可以有空格** 。
->   ```sass=0
+>   ```scss
 >   /* Error */
 >   @if (/* Condition-1 */ ) {
 >       ...
@@ -47,13 +51,13 @@ present    :
 >   ```
 
 * 除了上述的表示方式，對於 CSS 屬性也支援 `if-else` 運算。
-    ```sass=0
+    ```scss
     .parent {
         width: if($condition, $value-if-true, $value-if-false);
     }
     ```
     * 範例
-        ```sass=0
+        ```scss
         width: if($i % 2 == 0, 300px, 350px);
         margin-left: if($i % 2 == 0, 0px, 50px);
 
@@ -65,14 +69,14 @@ present    :
 
 * Sass 提供的 **Each 迴圈** 針對清單 (List) 中的每一項值進行迭代運算。
 * 在 Sass 中，以符號 **`@each`** 進行迴圈運算。
-    ```sass=0
+    ```scss
     @each $item in $list {
         /* Declarations */
     }
     ```
     * 變數 `$item` 將動態代入 `$list` 的每一項進入迴圈。
 * 範例
-    ```sass=0
+    ```scss
     $list: (orange, purple, teal);
 
     @each $item in $list {
@@ -86,7 +90,7 @@ present    :
 
 * Sass 提供的 **For 迴圈** 運算，其概念與一般程式中的 `for` 迴圈概念相同，需給定迴圈的 **起始值** 與 **終止值**。
 * 在 Sass 中，以符號 **`@for`** 進行迴圈運算。
-    ```sass=0
+    ```scss
     @for $i from $begin through $end {
         /* Declarations */
     }
@@ -95,7 +99,7 @@ present    :
     * 變數 `$begin` 與 `$end` 作爲迴圈的起始點與終止點。
     * 關鍵字 `through` 與 `to` 可以交換使用。
 * 範例
-    ```sass=0
+    ```scss
     @for $i from 1 through $total {
       .ray:nth-child(#{$i}) {
         background: adjust-hue(blue, $i * $step);

@@ -17,6 +17,8 @@ present    :
 
 > 在前面幾篇的分享中，針對 Sass 的觀念與運算作介紹。然而，Sass 除了能大幅縮減過去 CSS 的撰寫篇幅，但是若不能有良好的架構，則會顯得十分糟糕，因此本章將針對 Sass 開發上的架構與維護進行說明。
 
+---
+
 ### 8.1 Extend
 
 * CSS 中常見發生某一個元件需要延續另一個元件的設定作 **部分修改** 的情形，而過去我們通常會將這二個元件設定一個 **相同的 `class` 名稱**，然後針對需要部分修改的元件額外多取一個新的 `class` 名稱。
@@ -26,7 +28,7 @@ present    :
     ```
     * 上述情形會有一個潛在性的問題，當要執行第二個 `<span>` 的 CSS 時就必須同時列出兩個 `class` 名稱。
 * 爲解決上述問題，Sass 提供 `@extend` 語法，可以直接延續 `class=test` 的 CSS 進行修改，避免因疏忽而發生的錯誤。
-    ```sass
+    ```scss
     .test {
         background-color: #FFDDDD;
         border: 1px solid yellow;
@@ -64,7 +66,7 @@ present    :
 * Sass 中針對上述問題提供一個特別的選取項型態稱作 **Placeholders**。
 * **Placeholders 的效果等同於類型 (Class) 與 識別 (ID) 選取項**，符號上使用 **`%`** 而非類型選取項所使用的 `.` 或識別選取項所使用的 `#`。
 * Placeholders 保留原本 CSS 的規則，且 **只有當使用 `@extend` 才會有作用**。
-    ```sass
+    ```scss
      a%drink {
         font-size: 2em;
         background-color: $lemon-yellow;
