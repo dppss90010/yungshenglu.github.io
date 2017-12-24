@@ -24,7 +24,7 @@ present    :
 * Sass 中的 **組合表示 (Mixins)** 允許我們將原本 CSS 中的宣告包裝成一個獨立的組合，讓往後撰寫 CSS 可以直接重複使用。
 * Sass 中的 **組合表示 (Mixins)** 在概念上可以理解爲一般程式中的 **函式 (Function)**。
 * 在 Sass 中，以符號 **`@mixin`** 來宣告組合。
-    ```sass=0
+    ```sass
     @mixin backface-visibility {
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
@@ -34,7 +34,7 @@ present    :
     }
     ```
 * 欲呼叫定義好的組合時，使用 **`@include`** 指令。
-    ```sass=0
+    ```sass
     .parent {
         height: 100%;
         position: absolute;
@@ -63,7 +63,7 @@ present    :
 ### 4.2 進階組合表示
 
 * Sass 中的組合表示 (Mixins) 可以 **附帶參數**，概念如同 **類別 (Class)**。
-    ```sass=0
+    ```sass
     @mixin backface-visibility($visibility) {
         backface-visibility: $visibility;
         -webkit-backface-visibility: $visibility;
@@ -73,7 +73,7 @@ present    :
     }
     ```
     * 欲呼叫 `backface-visibility` 時，可直接將屬性值代入。
-        ```sass=0
+        ```sass
         .parent {
             height: 100%;
             position: absolute;
@@ -94,7 +94,7 @@ present    :
     ```
     * 欲呼叫 `backface-visibility` 卻沒有指定值代入時，會將預設值代入。
 * Sass 中的組合表示 (Mixins) 的附帶 **多個參數** 。
-    ```sass=0
+    ```sass
     @mixin stripes($direction, $width-percent, $stripe-color, $stripe-background: #FFFFFF) {
         background: repeating-linear-gradient(
             $direction,
@@ -114,7 +114,7 @@ present    :
     );
     ```
     * 欲呼叫 `stripe` 時，可以將事先定義的 **多個參數組合** 代入。
-        ```sass=0
+        ```sass
         .parent {
             height: 100%;
             width: 100%;
@@ -128,7 +128,7 @@ present    :
 * Sass 的字串內插是將一個字串型態的變數**放置在二個字串之間**。
 * 對於 Sass 的組合表示而言，字串內插允許我們能在選取項中重複使用 **相同的字串變數** 或 **檔案名稱**。
 * 在 Sass 中，以符號 **`#{$variable}`** 來表示字串內插。
-    ```sass=0
+    ```sass
     @mixin photo-content($file) {
         /* 字串內插 */
         content: url(#{$file}.jpg);
@@ -142,7 +142,7 @@ present    :
     }
     ```
     * 以上 Sass 將會編譯成以下的 CSS：
-        ```css=0
+        ```css
         .photo {
             content: url(test.jpg);
             margin: 0px auto;
@@ -171,7 +171,7 @@ present    :
     }
     ```
     * 以上 Sass 將會編譯成以下的 CSS：
-        ```css=0
+        ```css
         .word {
             display: block;
             position: relative;

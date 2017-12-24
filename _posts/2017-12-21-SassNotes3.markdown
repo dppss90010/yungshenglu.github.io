@@ -26,7 +26,7 @@ present    :
 * 若有選取項 (Selector) 在另一個選取項內部時，我們稱內部的 選取項爲外部選取項的 **子代選取項 (Child selector)** ，相對外部的選取項即爲內部選取項的 **母代選取項 (Parent selector)** 。
 * 此關係如同 HTML 中元件之間的對應。
 * 說例：以下`.child` 爲子代選取項而 `.parent` 爲母代選取項。
-    ```sass=0
+    ```sass
     .parent {
         color: #FFFFFF;
         .child {
@@ -35,7 +35,7 @@ present    :
     }
     ```
 * 上述 SCSS 的效果等同以下 CSS 語法。
-    ```css=0
+    ```css
     .parent {
         color: #FFFFFF;
     }
@@ -56,7 +56,7 @@ present    :
     * `border-color` 與 `border-radius` 都屬於 `border` 類別下的屬性，即具有相同類別的屬性。
     * 具有相同類別的屬性還有許多說例，只要滿足 **相同的前綴表示** 即是。
 * 範例：以下 Sass 程式將原本 CSS 中的 `font` 屬性以巢狀表示。 
-    ```sass=0
+    ```sass
     .parent {
         font: {
             family: Roboto, sans-serif;
@@ -66,7 +66,7 @@ present    :
     }
     ```
     * 以上 Sass 將會編譯成以下的 CSS：
-        ```css=0
+        ```css
         .parent {
             font-family: Roboto, sans-serif;
             font-size: 12px;
@@ -82,7 +82,7 @@ present    :
     * **Pseudo-class** 是針對 HTML 元件在**特定狀態**的呈現。如：常見的`:hover`，`:focus` 等。
     * **Pseudo-element** 是針對 HTML 元件中的**特定部分**呈現。如：常見的`::before`，`::after` 等。
 * 在 Sass 中，以符號 `&` 來表示其母代選取項 (Parent selector) 需要被置入。同時也解決反覆撰寫 pseudo-class 的困擾。
-    ```sass=0
+    ```sass
     .parent {
         &:hover {
             font-size: 20px;
@@ -90,7 +90,7 @@ present    :
     }
     ```
     * 以上 Sass 將會編譯成以下的 CSS：
-        ```css=0
+        ```css
         .parent:hover {
             font-size: 20px;
         }
