@@ -19,6 +19,8 @@ present    : https://slides.com/yungshenglu/mc2017/live
 * 地點：高雄義大世界 (高雄市大樹區學城路一段10號)
 * 時間：27 - 28 AUG 2017
 
+---
+
 ## References
 
 * [Mobile Computing Workshop 2017 官網](https://sites.google.com/site/mc2017tw/)

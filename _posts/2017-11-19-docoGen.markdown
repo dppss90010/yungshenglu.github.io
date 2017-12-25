@@ -20,6 +20,8 @@ present    :
 
 **docoGen** is an open source project for convenient and widely used in document generation. Just write down your content in JSON format, then it will generate the general format, e.g., PDF for LaTex or web page (**docoGen-WebUI**).
 
+---
+
 ## References
 
 * [docoGen 中文簡易說明](http://slides.com/kevinbird61/docogen)
@@ -29,6 +31,8 @@ present    :
 * More abour *docoGen-WebUI*
     * [docoGen-WebUI GitHub](https://github.com/toolbuddy/docoGen-WebUI)
     * [docoGen-WebUI Wiki](https://github.com/toolbuddy/docoGen-WebUI/wiki)
+
+---
 
 ## Contact
 
