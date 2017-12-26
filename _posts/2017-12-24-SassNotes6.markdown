@@ -35,20 +35,20 @@ present    :
     }
     ```
 
-> **注意**
-> * 條件運算 `@if`、`@else-if` 和 `@else` 與連接條件的括弧之間 **不可以有空格** 。
->   ```scss
->   /* Error */
->   @if (/* Condition-1 */ ) {
->       ...
->   }
->   @else-if (/* Condition-2*/ ) {
->       ...
->   } 
->   @else ( /*Condition-3*/ ) {
->       ...
->   }
->   ```
+    > **注意**
+    > * 條件運算 `@if`、`@else-if` 和 `@else` 與連接條件的括弧之間 **不可以有空格** 。
+    >   ```scss
+    >   /* Error */
+    >   @if (/* Condition-1 */ ) {
+    >       ...
+    >   }
+    >   @else-if (/* Condition-2*/ ) {
+    >       ...
+    >   } 
+    >   @else ( /*Condition-3*/ ) {
+    >       ...
+    >   }
+    >   ```
 
 * 除了上述的表示方式，對於 CSS 屬性也支援 `if-else` 運算。
     ```scss
