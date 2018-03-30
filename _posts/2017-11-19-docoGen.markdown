@@ -9,6 +9,8 @@ comments   : true
 signature  : true
 slides     : https://yungshenglu.github.io/slides/20171119_docoGen.html
 present    : 
+github     :
+link       :
 ---
 
 ![docoGen](https://i.imgur.com/fkx11KR.png)

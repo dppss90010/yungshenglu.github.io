@@ -9,6 +9,8 @@ comments   : true
 signature  : true
 slides     : https://yungshenglu.github.io/slides/20170831_mc2017.html
 present    : https://slides.com/yungshenglu/mc2017/live
+github     :
+link       :
 ---
 
 ## About Mobile Computing Workshop 2017

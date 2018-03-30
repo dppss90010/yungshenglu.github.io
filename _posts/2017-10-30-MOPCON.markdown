@@ -9,6 +9,8 @@ comments   : true
 signature  : true
 slides     : https://yungshenglu.github.io/slides/20171030_mopcon.html
 present    : https://slides.com/yungshenglu/mopcon2017/live
+github     :
+link       :
 ---
 
 ## About MOPCON 2017

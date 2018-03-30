@@ -26,6 +26,24 @@ layout: default
           <a href="{{ page.present }}">Present Live</a>
         </span>
     {% endif %}
+
+    {% if page.github != null %}
+        <span class="post-slides" style="margin: 0 0.5em">
+          <span class="fa-stack fa-sm">
+            <i class="fa fa-github fa-stack-1x"></i>
+          </span>
+          <a href="{{ page.github }}">GitHub</a>
+        </span>
+    {% endif %}
+
+    {% if page.link != null %}
+        <span class="post-slides" style="margin: 0 0.5em">
+          <span class="fa-stack fa-sm">
+            <i class="fa fa-external-link fa-stack-1x"></i>
+          </span>
+          <a href="{{ page.link }}">Source Link</a>
+        </span>
+    {% endif %}
   </span>
  
   {{ content }}
