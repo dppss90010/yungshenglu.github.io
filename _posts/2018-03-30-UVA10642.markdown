@@ -9,7 +9,7 @@ comments   : true
 signature  : true
 slides     : 
 present    :
-github     : https://github.com/yungshenglu/OnlineJudgeUVA/tree/master/UVA-10420
+github     : https://github.com/yungshenglu/OnlineJudgeUVA/tree/master/UVA-10642
 link       : https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=54
 ---
 
