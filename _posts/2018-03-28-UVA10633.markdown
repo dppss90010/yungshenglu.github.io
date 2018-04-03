@@ -4,7 +4,7 @@ title      : "UVA-10633 - Rare Easy Problem"
 subtitle   : "UVa Online Judge"
 date       : 2018-03-28 18:00:00
 author     : "Yung-Sheng Lu"
-tags       : OnlineJudge UVa
+tags       : OnlineJudge UVa Math
 comments   : true
 signature  : true
 slides     : 

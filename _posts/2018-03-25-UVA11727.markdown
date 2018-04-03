@@ -4,7 +4,7 @@ title      : "UVA-11727 - Cost Cutting"
 subtitle   : "UVa Online Judge"
 date       : 2018-03-25 18:00:00
 author     : "Yung-Sheng Lu"
-tags       : OnlineJudge UVa
+tags       : OnlineJudge UVa Sorting
 comments   : true
 signature  : true
 slides     : 

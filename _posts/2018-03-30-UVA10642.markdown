@@ -4,7 +4,7 @@ title      : "UVA-10642 - Can You Solve It?"
 subtitle   : "UVa Online Judge"
 date       : 2018-03-30 18:00:00
 author     : "Yung-Sheng Lu"
-tags       : OnlineJudge UVa
+tags       : OnlineJudge UVa Math
 comments   : true
 signature  : true
 slides     : 
