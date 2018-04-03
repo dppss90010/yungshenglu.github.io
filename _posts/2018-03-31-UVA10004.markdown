@@ -20,18 +20,18 @@ link       : https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid
 
 ## 題意概要
 
-本題為「四色地圖理論 (Four Color Map Theorem)」。簡單來說，就是僅以 4 種顏色在地圖上不同的區域塗色，使得相鄰的區域顏色均不相同。題目將給你一個相連的圖，請你在節點上塗色 (只有 2 種不同的顏色)，並且回答是否可以使得相鄰的節點顏色均不相同。為了使問題簡單一些，你可以假設：
+本題為「四色地圖理論 (Four Color Map Theorem)」。簡單來說，就是僅以四種顏色在地圖上不同的區域塗色，使得相鄰的區域顏色均不相同。題目將給你一個相連的圖，請你在節點上塗色 (只有 $$2$$ 種不同的顏色)，並且回答是否可以使得相鄰的節點顏色均不相同。為了使問題簡單一些，你可以假設：
 * 沒有節點會有連向自己的邊。
-* 邊是沒有方向性的，也就是說如果節點A可以連到節點B，那麼代表節點 B 也可以連到節點 A。
-* 圖形是強連通的，也就是說任 2 節點之間皆有路徑相連。
-本題希望你求得「是否可以用 2 種顏色塗節點使得相鄰的節點顏色均不相同」。
+* 邊是沒有方向性的，也就是說如果節點 $$A$$ 可以連到節點 $$B$$，那麼代表節點 $$B$$ 也可以連到節點 $$A$$。
+* 圖形是強連通的，也就是說任兩節點之間皆有路徑相連。
+本題希望你求得「是否可以用 $$2$$ 種顏色塗節點使得相鄰的節點顏色均不相同」。
 
-* **分析：**本題為簡單的 BFS 題目，可以透過 BFS 走遍所有的點，走過的點將它編號為 1 或 2 (也就是將其塗為二種顏色)，如果下一個點還沒走過，就將它標上和現在這個點「不一樣的編號」(相鄰的顏色要不相同)，如果下一個已經走過，而編號「和現在這個點一樣」，回傳 false，表示不可能用 2 種顏色塗節點使得相鄰的節點顏色均不相同，否則當 BFS 搜索完畢後，回傳 true。
+* **分析：**本題為簡單的 BFS 題目，可以透過 BFS 走遍所有的點，走過的點將它編號為 $$1$$ 或 $$2$$ (也就是將其塗為二種顏色)，如果下一個點還沒走過，就將它標上和現在這個點「不一樣的編號」(相鄰的顏色要不相同)，如果下一個已經走過，而編號「和現在這個點一樣」，回傳 false，表示不可能用兩種顏色塗節點使得相鄰的節點顏色均不相同，否則當 BFS 搜索完畢後，回傳 true。
 
 ---
 ## Input
 
-The input consists of several test cases. Each test case starts with a line containing the number n (1 < n < 200) of different nodes. The second line contains the number of edges l. After this, l lines will follow, each containing two numbers that specify an edge between the two nodes that they represent. A node in the graph will be labeled using a number a (0 ≤ a < n). An input with n = 0 will mark the end of the input and is not to be processed.
+The input consists of several test cases. Each test case starts with a line containing the number $$n$$ ($$1 < n < 200$$) of different nodes. The second line contains the number of edges $$l$$. After this, $$l$$ lines will follow, each containing two numbers that specify an edge between the two nodes that they represent. A node in the graph will be labeled using a number $$a$$ ($$0 \le a < n$$). An input with $$n = 0$$ will mark the end of the input and is not to be processed.
 
 ---
 ## Output
