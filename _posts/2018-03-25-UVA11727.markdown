@@ -19,13 +19,13 @@ link       : https://uva.onlinejudge.org/index.php?option=onlinejudge&Itemid=8&p
 
 ## 題意概要
 
-簡單來說，XYZ 公司為了要節省成本，假設現在有 3 位員工，而現在公司要裁掉其中 2 個。裁決得方式是裁掉拿最多薪水以及拿最少薪水的兩人，現在給你 3 位員工的薪水，請你找出誰不會被裁員。
+簡單來說，XYZ 公司為了要節省成本，假設現在有 $$3$$ 位員工，而現在公司要裁掉其中 $$2$$ 個。裁決得方式是裁掉拿最多薪水以及拿最少薪水的兩人，現在給你 $$3$$ 位員工的薪水，請你找出誰不會被裁員。
 * **分析：**本題相當簡單，只需要按照題目意思找到「中間值」即可。
 
 ---
 ## Input
 
-The first line of input is an integer T (T < 20) that indicates the number of test cases. Each case consists of a line with 3 distinct positive integers. These 3 integers represent the salaries of the three employees. All these integers will be in the range [1000, 10000].
+The first line of input is an integer $$T$$ ($$T < 20$$) that indicates the number of test cases. Each case consists of a line with $$3$$ distinct positive integers. These $$3$$ integers represent the salaries of the three employees. All these integers will be in the range $$[1,000, 10,000]$$.
 
 ---
 ## Output

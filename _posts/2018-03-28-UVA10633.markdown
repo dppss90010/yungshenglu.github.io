@@ -19,19 +19,19 @@ link       : https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_
 
 ## 題意概要
 
-假設有一個整數 N，將 N 去掉個位數字後所形成的數字 M，題目目前已知 N - M，反求出可能的 N 為多少 (N 可能有兩組解，輸出須按照由小到大的方式)。
+假設有一個整數 $$N$$，將 $$N$$ 去掉個位數字後所形成的數字 $$M$$，題目目前已知 $$N - M$$，反求出可能的 $$N$$ 為多少 ($$N$$ 可能有兩組解，輸出須按照由小到大的方式)。
 
-* **分析：**本題為簡單的數論題，$N = 10 * a + b$，其中 0 ≤ b ≤ 9，則 M = a。故可以得到 $N - M = N - a = 9 * a + b$，因此只需要枚舉所有的 b (0 ≤ b ≤ 9) 計算出滿足條件的 N 即為所求。
+* **分析：**本題為簡單的數論題，$$N = 10 \times a + b$$，其中 $$0 \le b \le 9$$，則 $$M = a$$。故可以得到 $$N - M = N - a = 9 \times a + b$$，因此只需要枚舉所有的 $$b$$ ($$0 \le b \le 9$$) 計算出滿足條件的 N 即為所求。
 
 ---
 ## Input
 
-Input consists of multiple lines, one line per case. Each line contains a single positive integer between 10 and 1018 inclusive, giving the value of N − M. Input is terminated by a line containing "0".
+Input consists of multiple lines, one line per case. Each line contains a single positive integer between $$10$$ and $$1018$$ inclusive, giving the value of $$N − M$$. Input is terminated by a line containing "0".
 
 ---
 ## Output
 
-For each case, print one line containing the possible values of N in sorted order. Separate consecutive numbers with a single space.
+For each case, print one line containing the possible values of $$N$$ in sorted order. Separate consecutive numbers with a single space.
 
 ---
 ## Sample Input

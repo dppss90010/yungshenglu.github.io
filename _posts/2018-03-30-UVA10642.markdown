@@ -23,12 +23,12 @@ link       : https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_
 
 ![](http://gpe3.acm-icpc.tw/pct/images/8870d5bbbdbbe4e90619a25a1f112e27.jpg)
 
-* **分析：**簡單來說，本題要找出兩點需要經過多少點可以到達，點到點走的方式請參考原題目的圖。因此，可以先計算出 $$(0, 0)$$ 到第一個點的距離 ( $$s_1$$ )，在計算 $$(0, 0)$$ 到第二點的距離 ( $$s_2$$ )，而 $$s_2 - s_1$$ 即是答案。
+* **分析：**簡單來說，本題要找出兩點需要經過多少點可以到達，點到點走的方式請參考原題目的圖。因此，可以先計算出 $$(0, 0)$$ 到第一個點的距離 ($$s_1$$)，在計算 $$(0, 0)$$ 到第二點的距離 ($$s_2$$)，而 $$s_2 - s_1$$ 即是答案。
 
 ---
 ## Input
 
-The first line in the input is the number of test cases n (0 < n ≤ 500) to handle. Following there are n lines each containing four integers (0 ≤ each_integer ≤ 100,000) the first pair of which represents the coordinates of the source circle and the other represents that of the destination circle. The coordinates are listed in a form (x, y).
+The first line in the input is the number of test cases n (0 < n $$\le$$ 500) to handle. Following there are n lines each containing four integers (0 ≤ each_integer $$\le$$ 100,000) the first pair of which represents the coordinates of the source circle and the other represents that of the destination circle. The coordinates are listed in a form $$(x, y)$$.
 
 ---
 ## Output
