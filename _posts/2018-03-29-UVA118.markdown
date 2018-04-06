@@ -4,7 +4,7 @@ title      : "UVA-118 - Mutant Flatworld Explorers"
 subtitle   : "UVa Online Judge"
 date       : 2018-03-29 18:00:00
 author     : "Yung-Sheng Lu"
-tags       : OnlineJudge UVa Basic
+tags       : OnlineJudge UVa Simulation
 comments   : true
 signature  : true
 slides     : 
