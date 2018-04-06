@@ -4,7 +4,7 @@ title      : "UVA-10591 - Happy Number"
 subtitle   : "UVa Online Judge"
 date       : 2018-04-02 18:00:00
 author     : "Yung-Sheng Lu"
-tags       : OnlineJudge UVa Math
+tags       : OnlineJudge UVa DataStructure Math
 comments   : true
 signature  : true
 slides     : 
