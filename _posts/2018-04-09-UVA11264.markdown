@@ -19,7 +19,7 @@ link       : https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid
 
 ## 題意概要
 
-假設某個國家流通的硬幣共有 n 種，為了要儘可能的收集最多種不同的硬幣。假設從銀行提領 $$X$$ 元，而銀行會按照下列演算法兌換硬幣：
+假設某個國家流通的硬幣共有 $n$ 種，為了要儘可能的收集最多種不同的硬幣。假設從銀行提領 $$X$$ 元，而銀行會按照下列演算法兌換硬幣：
 
 ```
 withdraw(X) {
