@@ -1,7 +1,7 @@
 ---
 layout     : post
-title      : "無線通訊系統學習雜記 - Packet Detection"
-subtitle   : "UVa Online Judge"
+title      : "Packet Detection"
+subtitle   : "無線通訊系統學習雜記"
 date       : 2018-04-10 19:00:00
 author     : "Yung-Sheng Lu"
 tags       : WirelessCommunication PacketDetection 
@@ -28,6 +28,7 @@ link       :
 
 ![](https://i.imgur.com/4uK0P5G.png)
 
+---
 ### Packet Detection in IEEE 802.11
 
 * 在 IEEE 802.11 的標準中，定義每一個 packet 的起始會有一段「預備訊號 (preemble)」。其中，preemble 可以分為為個部分，且這個兩個部分是完全相同的。
