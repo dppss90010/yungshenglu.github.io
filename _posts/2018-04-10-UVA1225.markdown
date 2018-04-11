@@ -1,0 +1,55 @@
+---
+layout     : post
+title      : "UVA-1225 - Coin Collector"
+subtitle   : "UVa Online Judge"
+date       : 2018-04-10 18:00:00
+author     : "Yung-Sheng Lu"
+tags       : OnlineJudge UVa Math
+comments   : true
+signature  : true
+slides     : 
+present    :
+github     : https://github.com/yungshenglu/OnlineJudgeUVA/tree/master/UVA-1225
+link       : https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3666
+---
+
+> * UVa Online Judge 解題結果請於 Submit 後，參閱 [uHunt](https://uhunt.onlinejudge.org/)。
+> * 如果你有任何建議與指教，歡迎於下方留言一起討論喔！
+> * 本題選為「20170523 大學程式能力檢定 CPE」題目。
+
+## 題意概要
+
+簡單來說，假設給定 $$N = 13$$，則會將 $$1$$ ~ $$13$$ 串接起來，形成一個數字 $$12345678910111213$$，題目希望求得在這個數字中 $$0$$ ~ $$9$$ 個別出現的次數。以上述 $$N = 13$$ 為例：
+
+|---|---|---|---|---|---|---|---|---|---|---|
+| 要統計的數字 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+| 出現次數 | 1 | 6 | 2 | 2 | 1 | 1 | 1 | 1 | 1 | 1 |
+
+* **分析：**本題為數學題，按照題目給的 $$N$$，可以逐一從 $$1$$ 開始到 $$N$$ 的每一個數字中，每一位數的出現數字做統計即可。注意最後輸出的格式，最後一個印出的數字之後不可以有空格。
+
+---
+## Input
+
+The input file consists of several data sets. The first line of the input file contains the number of data sets which is a positive integer and is not bigger than 20. The following lines describe the data sets. For each test case, there is one single line containing the number $$N$$.
+
+---
+## Output
+
+For each test case, write sequentially in one line the number of digit 0, 1, ..., 9 separated by a space.
+
+---
+## Sample Input
+
+```
+2
+3
+13
+```
+
+---
+## Sample Output
+
+```
+0 1 1 1 0 0 0 0 0 0
+1 6 2 2 1 1 1 1 1 1
+```
