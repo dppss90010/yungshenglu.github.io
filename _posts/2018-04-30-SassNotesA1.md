@@ -26,13 +26,13 @@ link       :
 * **`percentage($value)`**：將一個「單位相同」的數值轉換為百分比。
     ```scss
     $value1: .2;
-    $perc = percentage($value1);
+    $perc: percentage($value1);
     /* $perc: 20% */
     $value2: 2px / 10em;
-    $perc = percentage($value2);
+    $perc: percentage($value2);
     /* Compile error - $value2: 0.2px/em is not a unitless number for `percentage' */
     $value3: 2em / 10em;
-    $perc = percentage($value3);
+    $perc: percentage($value3);
     /* $perc: 20% */
     ```
 * **`abs($value)`**：絕對值運算，若 `$value` 為數學式，則「單位要相同」。
