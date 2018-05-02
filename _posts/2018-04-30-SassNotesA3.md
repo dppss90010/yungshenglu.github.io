@@ -84,17 +84,40 @@ link       :
     $string: "Hello";
     $insert: "Sass!";
     $result: str-insert($string, $insert, 1);
-    /* $result: Sass!Hello */
+    /* $result: "Sass!Hello" */
     $result: str-insert($string, $insert, 6);
-    /* $result: HelloSass! */
+    /* $result: "HelloSass!" */
     ```
-
-(待整理...)
+* **`str-slice($string, $start, $end)`**：擷取字串 `$string` 中，起始索引為 `$start` 至索引為 `$end` 的字串。其中，`$end` 不一定要給定 (`$end` 預設值：`1`)。
+    * **`$start`**：起始的索引；若為「負值」，則是從「字串的結尾」開始起算。
+    * **`$end`**：結束的索引；若為「負值」，則是從「字串的結尾」開始起算，預設值為 `1`。
+    ```scss
+    $string: "Hello Sass!";
+    $result: str-slice($string, 7, 10);
+    /* $result: "Sass" */
+    $result: str-slice($string, 7);
+    /* $result: "Sass!" */
+    $result: str-slice($string, -5, -2);
+    /* $result: "Sass" */
+    $result: str-slice($string, 7, -1);
+    /* $result: "Sass!" */
+    ```
 
 ---
 ### A3.4 - 字串大寫小寫函式
 
-(待整理...)
+* **`to-upper-case($string)`**：將字串 `$string` 全部轉換為「大寫」。
+    ```scss
+    $string: "hello sass!";
+    $upper: to-upper-case($string);
+    /* $upper: "HELLO SASS!" */
+    ```
+* **`to-lower-case($string)`**：將字串 `$string` 全部轉換為「小寫」。
+    ```scss
+    $string: "HELLO SASS!";
+    $upper: to-lower-case($string);
+    /* $upper: "hello sass!" */
+    ```
 
 ---
 ## 【Sass 學習雜記】系列
