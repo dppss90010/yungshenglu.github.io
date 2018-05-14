@@ -2,7 +2,7 @@
 layout     : post
 title      : "Steering with Eyes Closed: mm-Wave Beam Steering without In-Band Measurement"
 subtitle   : "Papers Study"
-date       : 2018-01-16 18:00:00
+date       : 2018-01-16 12:00:00
 author     : "Yung-Sheng Lu"
 tags       : mmWave Beamforming
 comments   : true

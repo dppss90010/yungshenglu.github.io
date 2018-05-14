@@ -2,7 +2,7 @@
 layout     : post
 title      : "MUSIC and Improved MUSIC algorithm to Estimate Direction Arrival"
 subtitle   : "Papers Study"
-date       : 2018-03-01 18:00:00
+date       : 2018-03-01 12:00:00
 author     : "Yung-Sheng Lu"
 tags       : MUSIC Algorithm DOA
 comments   : true
