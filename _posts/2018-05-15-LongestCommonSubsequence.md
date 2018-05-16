@@ -13,7 +13,7 @@ github     :
 link       : 
 ---
 
-# 最長共同子序列 (Longest Common Subsequence; LCS)
+## Longest Common Subsequence (LCS)
 
 * 在多個序列中，出現在每一個序列 (亦即：每個序列都有的值) 且長度最為最長，該共同序列稱為「最常共同子序列 (Longest Common Subsequence; LCS)」。以下為例：
     * $$S_1$$ 和 $$S_2$$ 為以下二個序列，試求最長共同子序列。
