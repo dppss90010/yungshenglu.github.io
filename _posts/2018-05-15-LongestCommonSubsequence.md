@@ -45,49 +45,49 @@ link       :
 * 假設有二個序列為 $$S_1$$ 和 $$S_2$$，其「最長共同子序列 (LCS)」表示為：$$\mathrm{LCS}(S_1, S_2)$$。
 * 序列 $$S_1$$ 和 $$S_2$$ 的最後一個元素分別以 $$e_1$$ 與 $$e_2$$ 表示，剩餘部分以 $$\mathrm{sub}_1$$ 與   $$\mathrm{sub}_2$$ 表示，故可以將序列 $$S_1$$ 與 $$S_2$$ 表示如下：
     $$
-    \begin{equation}
-    S_1 = \mathrm{sub}_1 + e_1
+    \begin{align*}
+    S_1 = \mathrm{sub}_1 + e_1\\
     S_2 = \mathrm{sub}_2 + e_2
-    \end{equation}
+    \end{align*}
     $$
 * 由以上的二個式子，可以將 $$S_1$$ 與 $$S_2$$ 的「最長共同子序列 (LCS)」分為以下四種情形討論：
     1. LCS 包含 $$e_1$$ 但不含 $$e_2$$。
         此種情形對於 $$e_2$$ 沒有用處，若要找到 LCS 只需找 $$\mathrm{sub}_2$$ 即可。
         $$
-        \begin{equation}
+        \begin{align*}
         \mathrm{LCS}(S_1, S_2) = \mathrm{LCS}(S_1, \mathrm{sub}_2)
-        \end{equation}
+        \end{align*}
         $$
     2. LCS 包含 $$e_2$$ 但不含 $$e_1$$。
         此種情形對於 $$e_1$$ 沒有用處，若要找到 LCS 只需找 $$\mathrm{sub}_1$$ 即可。
         $$
-        \begin{equation}
+        \begin{align*}
         \mathrm{LCS}(S_1, S_2) = \mathrm{LCS}(\mathrm{sub}_1, S_2)
-        \end{equation}
+        \end{align*}
         $$
     3. LCS 不含 $$e_1$$ 且不含 $$e_2$$。
         此種情形對於 $$e_1$$ 與 $$e_2$$ 沒有用處，若要找到 LCS 需找到 $$\mathrm{sub}_1$$ 與 $$\mathrm{sub}_2$$。
         $$
-        \begin{equation}
+        \begin{align*}
         \mathrm{LCS}(S_1, S_2) = \mathrm{LCS}(\mathrm{sub}_1, \mathrm{sub}_2)
-        \end{equation}
+        \end{align*}
         $$
     4. LCS 包含 $$e_1$$ 且包含 $$e_2$$。
-        此種情形同時包含 $$e_1$$ 與 $$e_2$$ 且 $$e_1$$ 與 $$e_2$$ 都是二個序列的最後一個元素，故 LCS 的最後一個元素必定為 $$e_1$$ (同時也是 $$e_2$$)>
+        此種情形同時包含 $$e_1$$ 與 $$e_2$$ 且 $$e_1$$ 與 $$e_2$$ 都是二個序列的最後一個元素，故 LCS 的最後一個元素必定為 $$e_1$$ (也是 $$e_2$$)。
         $$
-        \begin{equation}
+        \begin{align*}
         \mathrm{LCS}(S_1, S_2) = \mathrm{LCS}(\mathrm{sub}_1, \mathrm{sub}_2) + 1
-        \end{equation}
+        \end{align*}
         $$
 * 上述四種情形可以簡化為以下遞迴式：
     $$
-    \begin{equation}
+    \begin{align*}
     \mathrm{LCS}(S_1, S_2) =
     \begin{cases}
         \mathrm{max}( \mathrm{LCS}( \mathrm{sub}_1, S_2), \mathrm{LCS}(S_1, \mathrm{sub}_2) )       & \quad \text{if } n \text{ is even}\\
         \mathrm{LCS}(\mathrm{sub}_1, \mathrm{sub}_2) + e_1  & \quad \text{if } n \text{ is odd}
     \end{cases}
-    \end{equation}
+    \end{align*}
     $$
     * 當 $$s_1$$ 或 $$s_2$$ 為空集合，則 LCS 亦為空集合。
 
