@@ -19,17 +19,17 @@ link       :
     * $$S_1$$ 和 $$S_2$$ 為以下二個序列，試求最長共同子序列。
         $$
         \begin{equation}
-        S_1 = [ 2, 5, 7, 9, 4, 1, 3 ]
-        S_2 = [ 3, 5, 4, 5, 7 ]
+        S_1 = [ 2, 5, 7, 9, 4, 1, 3 ]\\
+        S_2 = [ 3, 5, 4, 5, 7 ]\\
         \mathrm{LCS}(S_1, S_2) = [ 5, 4, 3 ]
         \end{equation}
         $$
     * $$S_1$$、$$S_2$$ 和 $$S_3$$ 為以下三個序列，試求最長共同子序列。
         $$
         \begin{equation}
-        S_1 = [ a, b, c, d, b, c, e, e, a, ]
-        S_2 = [ c, a, b, d, e, f, g, a ]
-        S_3 = [ d, c, e, a ]
+        S_1 = [ a, b, c, d, b, c, e, e, a, ]\\
+        S_2 = [ c, a, b, d, e, f, g, a ]\\
+        S_3 = [ d, c, e, a ]\\
         \mathrm{LCS}(S_1, S_2, S_3) = { [ c, e, a ], [ d, e, a ] }
         \end{equation}
         $$
@@ -81,7 +81,7 @@ link       :
     * 上述四種情形可以簡化為以下遞迴式：
         $$
         \begin{equation}
-        \[ \mathem{LCS}(S_1, S_2) =
+        \[ \mathrm{LCS}(S_1, S_2) =
         \begin{cases}
             \mathrm{max}( \mathrm{LCS}( \mathrm{sub}_1, S_2), \mathrm{LCS}(S_1, \mathrm{sub}_2) )       & \quad \text{if } n \text{ is even}\\
             \mathrm{LCS}(\mathrm{sub}_1, \mathrm{sub}_2) + e_1  & \quad \text{if } n \text{ is odd}
@@ -104,7 +104,6 @@ link       :
         for (int j = 0; j <= 5; ++j)
             length[0][j] = 0;
         
-
         // Start
         for (int i = 1; i <= 7; ++i) {
             for (int j = 1; j <= 7; ++j) {
@@ -119,6 +118,7 @@ link       :
         printf("LCS length: %d\n", length[7][5]);
     }
     ~~~
+
 * 找出一個 Longest Common Subsequence (LCS)
     * `LCS[i][j]`：記錄每一格的結果是從哪一格而來。
     * 當某一格 `length[i][j]` 是由 `length[i-1][j-1] + 1` 而來，就印出 `s1[i]` （也是 `s2[j]`）。
@@ -135,7 +135,6 @@ link       :
         for (int j = 0; j <= 5; ++j)
             length[0][j] = 0;
         
-
         // Start
         for (int i = 1; i <= 7; ++i) {
             for (int j = 1; j <= 7; ++j) {
@@ -202,6 +201,7 @@ link       :
             printLCS(i - 1, j);
     }
     ~~~
+
 * 如何「找出所有的 Longest Common Subsequence (LCS)」？
     * 某一格的答案可以由上方、左方、左上方同時求得，因此可以將這些情形全部記錄下來。
     * 往回追溯的時候，可將所有情形追溯一遍，便可求出所有可能的 LCS。
@@ -213,7 +213,7 @@ link       :
 ---
 ## Practice
 
-* **UVa**
+* **Online Judge UVa**
     * UVa-111 - History Sorting
     * UVa-531 - Compromise
     * [UVa-10066 - The Twin Towers](https://yungshenglu.github.io/2018/04/21/UVA10066/)
