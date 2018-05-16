@@ -13,34 +13,34 @@ github     :
 link       : 
 ---
 
-## 1.1 Longest Common Subsequence (LCS)
+## 1.1 - Longest Common Subsequence (LCS)
 
 * 在多個序列中，出現在每一個序列 (亦即：每個序列都有的值) 且長度最為最長，該共同序列稱為「最常共同子序列 (Longest Common Subsequence; LCS)」。以下為例：
     * $$S_1$$ 和 $$S_2$$ 為以下二個序列，試求最長共同子序列。
         $$
-        \begin{equation}
+        \begin{align*}
         S_1 = [ 2, 5, 7, 9, 4, 1, 3 ]\\
         S_2 = [ 3, 5, 4, 5, 7 ]\\
         \mathrm{LCS}(S_1, S_2) = [ 5, 4, 3 ]
-        \end{equation}
+        \end{align*}
         $$
     * $$S_1$$、$$S_2$$ 和 $$S_3$$ 為以下三個序列，試求最長共同子序列。
         $$
-        \begin{equation}
+        \begin{align*}
         S_1 = [ a, b, c, d, b, c, e, e, a, ]\\
         S_2 = [ c, a, b, d, e, f, g, a ]\\
         S_3 = [ d, c, e, a ]\\
         \mathrm{LCS}(S_1, S_2, S_3) = { [ c, e, a ], [ d, e, a ] }
-        \end{equation}
+        \end{align*}
         $$
 * 求解*一群數列*的「最長共同子序列 (Longest Common Subsequce; LCS)」為 NP-hard 問題，沒有快速的演算法。罪簡單的方式是「窮舉法」：窮舉 $$S_1$$ 的所有子序列，檢查 $$S_2$$，...，$$S_n$$ 是否都有該子序列。
     * 時間複雜度 (Time complexity)：$$O(s_1! \cdot (s_2 + ... + s_n))$$。
     * 求解*二個序列*的「最長共同子序列」為 P 問題。以下將介紹各種演算法。
 
 ---
-## 1.2 LCS: Dynamic Programming
+## 1.2 - LCS: Dynamic Programming
 
-### 1.2.1 分割問題 (Partition)
+### 1.2.1 - 分割問題 (Partition)
 
 * 假設有二個序列為 $$S_1$$ 和 $$S_2$$，其「最長共同子序列 (LCS)」表示為：$$\mathrm{LCS}(S_1, S_2)$$。
 * 序列 $$S_1$$ 和 $$S_2$$ 的最後一個元素分別以 $$e_1$$ 與 $$e_2$$ 表示，剩餘部分以 $$\mathrm{sub}_1$$ 與   $$\mathrm{sub}_2$$ 表示，故可以將序列 $$S_1$$ 與 $$S_2$$ 表示如下：
@@ -91,7 +91,7 @@ link       :
     $$
     * 當 $$s_1$$ 或 $$s_2$$ 為空集合，則 LCS 亦為空集合。
 
-### 1.2.2 計算 Longest Common Subsequence (LCS) 的長度
+### 1.2.2 - 計算 Longest Common Subsequence (LCS) 的長度
 
 * `length[i][j]`：「 $$s_1$$ 前 $$i$$ 個元素」和「 $$s_2$$ 前 $$j$$ 個元素」的 LCS 長度。
 
@@ -123,7 +123,7 @@ void findLCS() {
 }
 ```
 
-### 1.2.3 找出一個 Longest Common Subsequence (LCS)
+### 1.2.3 - 找出一個 Longest Common Subsequence (LCS)
 
 * `LCS[i][j]`：記錄每一格的結果是從哪一格而來。
 * 當某一格 `length[i][j]` 是由 `length[i-1][j-1] + 1` 而來，就印出 `s1[i]` (也是 `s2[j]`)。
@@ -211,12 +211,12 @@ void printLCS_recursive(int i, int j) {
 }
 ```
 
-### 1.2.4 如何「找出所有的 LCS」？
+### 1.2.4 - 如何「找出所有的 LCS」？
 * 某一格的答案可以由上方、左方、左上方同時求得，因此可以將這些情形全部記錄下來。
 * 往回追溯的時候，可將所有情形追溯一遍，便可求出所有可能的 LCS。
 * 目前似乎**無法在「線性時間內」**找出所有的 LCS。
 
-### 1.2.5 節省記憶體空間
+### 1.2.5 - 節省記憶體空間
 * 如果只想求出 LCS 的長度，而不需要求出 LCS：填陣列時，只需要填上方、左方、左上方的格子。
 * 計算順序：**由左到右、由上到下**，陣列可以精簡成一行，然後暫存左上方的格子的值。
 
