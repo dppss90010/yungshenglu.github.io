@@ -30,7 +30,7 @@ link       :
 
         $$
         \begin{align*}
-        & S_1 = [ a, b, c, d, b, c, e, e, a, ]\\
+        & S_1 = [ a, b, c, d, b, c, e, e, a ]\\
         & S_2 = [ c, a, b, d, e, f, g, a ]\\
         & S_3 = [ d, c, e, a ]\\
         & \mathrm{LCS}(S_1, S_2, S_3) = { [ c, e, a ], [ d, e, a ] }
@@ -39,7 +39,7 @@ link       :
 
 * 求解*一群數列*的「最長共同子序列 (Longest Common Subsequce; LCS)」為 NP-hard 問題，沒有快速的演算法。罪簡單的方式是「窮舉法」：窮舉 $$S_1$$ 的所有子序列，檢查 $$S_2$$，...，$$S_n$$ 是否都有該子序列。
     * 時間複雜度 (Time complexity)：$$O(s_1! \cdot (s_2 + ... + s_n))$$。
-    * 求解*二個序列*的「最長共同子序列」為 P 問題。以下將介紹各種演算法。
+    * 求解*二個序列*的「最長共同子序列」為 P 問題。
 
 ---
 ## 1.2 - LCS: Dynamic Programming
