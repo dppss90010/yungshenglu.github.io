@@ -217,13 +217,13 @@ void printLCS_recursive(int i, int j) {
         return;
     
     if (LCS[i][j] == 0) {
-        printLCS(i - 1, j - 1);
+        printLCS_recursive(i - 1, j - 1);
         printf("%d ", s1[i]);
     }
     else if (LCS[i][j] == 1)
-        printLCS(i, j - 1);
+        printLCS_recursive(i, j - 1);
     else
-        printLCS(i - 1, j);
+        printLCS_recursive(i - 1, j);
 }
 ```
 
