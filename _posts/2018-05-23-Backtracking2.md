@@ -339,8 +339,8 @@ link       :
 ## Practice
 
 * **Online Judge UVa**
-    * UVa-195
-    * UVa-441
-    * UVa-10063
-    * UVa-10098
-    * UVa-10776
+    * UVa-195 - Anagram
+    * UVa-441 - Lotto
+    * UVa-10063 - Knuth's Permutation
+    * UVa-10098 - Generating Fast
+    * UVa-10776 - Determine The Combination

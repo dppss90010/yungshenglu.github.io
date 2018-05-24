@@ -147,37 +147,37 @@ link       :
 ## Practice
 
 * **Online Judge UVa**
-    * UVa-129
-    * UVa-140
-    * UVa-165
-    * UVa-193
-    * UVa-222
-    * UVa-259
-    * UVa-291
-    * UVa-301
-    * UVa-331
-    * UVa-399
-    * UVa-435
-    * UVa-524
-    * UVa-539
-    * UVa-565
-    * UVa-574
-    * UVa-598
-    * UVa-628
-    * UVa-656
-    * UVa-732
-    * UVa-10160
-    * UVa-10186
-    * UVa-10344
-    * UVa-10364
-    * UVa-10400
-    * UVa-10419
-    * UVa-10477
-    * UVa-10501
-    * UVa-10503
-    * UVa-10513
-    * UVa-10582
-    * UVa-10605
-    * UVa-10624
-    * UVa-10637
-    * UVa-10802
+    * UVa-129 - Krypton Factor
+    * UVa-140 - Bandwidth
+    * UVa-165 - Stamps
+    * UVa-193 - Graph Coloring
+    * UVa-222 - Budget Travel
+    * UVa-259 - Software Allocation
+    * UVa-291 - The House Of Santa Claus
+    * UVa-301 - Transportation
+    * UVa-331 - Mapping the Swaps
+    * UVa-399 - The Falling Leaves
+    * UVa-435 - Block Voting
+    * UVa-524 - Prime Ring Problem
+    * UVa-539 - The Settlers of Catan
+    * UVa-565 - Pizza Anyone?
+    * UVa-574 - Sum It Up
+    * UVa-598 - Bundling Newspapers
+    * UVa-628 - Passwords
+    * UVa-656 - Optimal Programs
+    * UVa-732 - Anagrams by Stack
+    * UVa-10160 - Servicing Stations
+    * UVa-10186 - Euro Cup 2000
+    * UVa-10344 - 23 out of 5
+    * UVa-10364 - Square
+    * UVa-10400 - Game Show Math
+    * UVa-10419 - Sum-up the Primes
+    * UVa-10477 - The Hybrid Knight
+    * UVa-10501 - Simplified Shisen-Sho
+    * UVa-10503 - The dominoes solotarie
+    * UVa-10513 - Bangladesh Sequences
+    * UVa-10582 - ASCII Labyrinth
+    * UVa-10605 - Mines For Diamonds
+    * UVa-10624 - Super Number
+    * UVa-10637 - Coprimes
+    * UVa-10802 - Lex Smallest Drive
