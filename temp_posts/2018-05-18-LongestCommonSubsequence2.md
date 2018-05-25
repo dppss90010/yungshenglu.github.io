@@ -21,3 +21,9 @@ link       :
 
 ---
 ## 2.3 - Four-Russians Speedup 
+
+
+---
+## References
+
+* [演算法筆記 - Longest Common Subsequence](http://www.csie.ntnu.edu.tw/~u91029/LongestCommonSubsequence.html)

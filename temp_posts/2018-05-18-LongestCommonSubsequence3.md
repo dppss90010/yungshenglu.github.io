@@ -33,3 +33,8 @@ link       :
     * POJ-2127 - Greatest Common Increasing Subsequence
 * **ACM-ICPC**
     * ICPC-5890 - Bracelets
+
+---
+## References
+
+* [演算法筆記 - Longest Common Subsequence](http://www.csie.ntnu.edu.tw/~u91029/LongestCommonSubsequence.html)

@@ -45,7 +45,7 @@ link       :
     }
     ```
 
-* 當多維度數值只需要「唯一一組」，可以讓回溯法提早結束。以下為範例程式：
+* 當多維度數值只需「唯一一組」，可以讓回溯法提早結束。
 
     ```cpp
     int solution[MAX_DIMENSION];
@@ -70,7 +70,7 @@ link       :
     }
     ```
 
-* 評估多維度數值的優劣：隨時剔除劣的、保留優的。以下為範例程式：
+* 評估多維度數值的優劣：隨時剔除劣的、保留優的。
 
     ```cpp
     int solution[MAX_DIMENSION];
@@ -181,3 +181,8 @@ link       :
     * UVa-10624 - Super Number
     * UVa-10637 - Coprimes
     * UVa-10802 - Lex Smallest Drive
+
+---
+## References
+
+* [演算法筆記 - Backtracking](http://www.csie.ntnu.edu.tw/~u91029/Backtracking.html)

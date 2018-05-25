@@ -345,3 +345,8 @@ link       :
     * UVa-10063 - Knuth's Permutation
     * UVa-10098 - Generating Fast
     * UVa-10776 - Determine The Combination
+
+---
+## References
+
+* [演算法筆記 - Backtracking](http://www.csie.ntnu.edu.tw/~u91029/Backtracking.html)

@@ -246,3 +246,8 @@ void printLCS_recursive(int i, int j) {
     * UVa-10192 - Vacation
     * UVa-10405 - Longest Common Subsequence
     * UVa-10723 - Cyborg Genes
+
+---
+## References
+
+* [演算法筆記 - Longest Common Subsequence](http://www.csie.ntnu.edu.tw/~u91029/LongestCommonSubsequence.html)
