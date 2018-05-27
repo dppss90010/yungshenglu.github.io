@@ -10,8 +10,8 @@ permalink           : pretty
 
 # Setup
 title               : Yung-Sheng's Notes
-tagline             : 'Personal Tech Notes'
-description         : 'News, articles and reviews.'
+tagline             : 'Personal Notes'
+description         : 'CS = Coding + Sharing'
 baseurl             : https://yungshenglu.github.io/
 
 author              : Yung-Sheng Lu
