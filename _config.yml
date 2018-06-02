@@ -9,7 +9,7 @@ gems                : ["jekyll-sitemap", "jekyll-paginate"]
 permalink           : pretty
 
 # Setup
-title               : Yung-Sheng's Notes
+title               : David's Notes
 tagline             : 'Personal Notes'
 description         : 'CS = Coding + Sharing'
 baseurl             : https://yungshenglu.github.io/
